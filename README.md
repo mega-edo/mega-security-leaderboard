@@ -5,7 +5,7 @@
     <img src="./logo_mega_code.svg" alt="MEGA Security" width="320">
   </a>
 
-  <h1>mega-security · leaderboard</h1>
+  <h1>MEGA Security · Leaderboard</h1>
 
   <p><strong>How well do today's frontier and small LLMs defend their system prompts — and how much does <code>prompt-optimize</code> change that?</strong><br>
   A 24-cell sweep across 4 vendors × 2 tiers × 3 production scenarios.</p>
