@@ -39,7 +39,7 @@
 
 | Number | Result |
 |---:|---|
-| **0.91** | Strongest frontier baseline DSR (`claude-opus-4-7`) |
+| **0.91** | Strongest frontier baseline DSR (`claude-opus-4.7`) |
 | **0.53** | Weakest frontier baseline DSR (`grok-4.20-reasoning`) |
 | **+0.50** | Largest single-model lift (`gemini-3.1-flash-lite`, 0.50 → 1.00) |
 | **23 / 24** | Cells reaching optimized DSR ≥ 0.94 |
@@ -61,11 +61,11 @@ So the two axes are **negatively correlated**, and "strong RLHF" trades baseline
 | `gemini-3.1-flash-lite-preview` | **0.50** | 1.00 | **+0.50** | Strongest instruction-following → weakest baseline + largest Δ |
 | `grok-4.20-reasoning` | **0.53** | 0.99 | **+0.47** | Reasoning faithfully follows attacker intent too — once optimized, hits the ceiling |
 | `gemini-3.1-pro-preview` | 0.68 | 1.00 | +0.32 | Same pattern as flash-lite |
-| `grok-4-1-fast-non-reasoning` | 0.66 | 0.99 | +0.33 | Same pattern |
+| `grok-4.1-fast-non-reasoning` | 0.66 | 0.99 | +0.33 | Same pattern |
 | `gpt-5.4-mini` | 0.73 | 0.95 | +0.22 | OpenAI RLHF hardened toward security → mid baseline + mid Δ |
 | `gpt-5.5` | 0.83 | 0.97 | +0.14 | Same pattern, ceiling hit even earlier on the OpenAI frontier |
-| `claude-haiku-4-5` | **0.80** | 0.91 | +0.11 | Strong RLHF → second-strongest baseline + small Δ |
-| `claude-opus-4-7` | **0.91** | 1.00 | **+0.09** | Strongest RLHF → strongest baseline + smallest Δ |
+| `claude-haiku-4.5` | **0.80** | 0.91 | +0.11 | Strong RLHF → second-strongest baseline + small Δ |
+| `claude-opus-4.7` | **0.91** | 1.00 | **+0.09** | Strongest RLHF → strongest baseline + smallest Δ |
 
 > [!TIP]
 > **Practical reading.** A 0.41 baseline gap between the strongest (opus 0.91) and weakest (flash-lite 0.50) frontier-or-small model **collapses to 0.00** once `prompt-optimize` runs. Vendor choice matters far less than whether the system prompt was tuned per-model.
@@ -83,12 +83,12 @@ Per-cell average across 3 scenarios, val DSR (raw, ERROR not excluded). Higher =
     <tr><th>Rank</th><th>Vendor</th><th>Tier</th><th>Model</th><th align="right">Agg</th><th align="right">Jailbreak</th><th align="right">PII</th><th align="right">Injection</th><th align="right">Leak</th><th align="right">FRR</th></tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>Anthropic</td><td>frontier</td><td><code>claude-opus-4-7</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.89</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.87</td><td align="right">0.00</td></tr>
+    <tr><td>1</td><td>Anthropic</td><td>frontier</td><td><code>claude-opus-4.7</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.89</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.87</td><td align="right">0.00</td></tr>
     <tr><td>2</td><td>OpenAI</td><td>frontier</td><td><code>gpt-5.5</code></td><td align="right"><strong>0.83</strong></td><td align="right">0.77</td><td align="right">0.67</td><td align="right">0.95</td><td align="right">0.92</td><td align="right">0.27</td></tr>
-    <tr><td>3</td><td>Anthropic</td><td>small</td><td><code>claude-haiku-4-5</code></td><td align="right"><strong>0.80</strong></td><td align="right">0.87</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.45</td><td align="right">0.02</td></tr>
+    <tr><td>3</td><td>Anthropic</td><td>small</td><td><code>claude-haiku-4.5</code></td><td align="right"><strong>0.80</strong></td><td align="right">0.87</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.45</td><td align="right">0.02</td></tr>
     <tr><td>4</td><td>OpenAI</td><td>small</td><td><code>gpt-5.4-mini</code></td><td align="right"><strong>0.73</strong></td><td align="right">0.67</td><td align="right">0.76</td><td align="right">0.97</td><td align="right">0.52</td><td align="right">0.02</td></tr>
     <tr><td>5</td><td>Google</td><td>frontier</td><td><code>gemini-3.1-pro-preview</code></td><td align="right"><strong>0.68</strong></td><td align="right">0.80</td><td align="right">0.64</td><td align="right">1.00</td><td align="right">0.28</td><td align="right">0.00</td></tr>
-    <tr><td>6</td><td>xAI</td><td>small</td><td><code>grok-4-1-fast-non-reasoning</code></td><td align="right"><strong>0.66</strong></td><td align="right">0.84</td><td align="right">0.31</td><td align="right">0.87</td><td align="right">0.63</td><td align="right">0.00</td></tr>
+    <tr><td>6</td><td>xAI</td><td>small</td><td><code>grok-4.1-fast-non-reasoning</code></td><td align="right"><strong>0.66</strong></td><td align="right">0.84</td><td align="right">0.31</td><td align="right">0.87</td><td align="right">0.63</td><td align="right">0.00</td></tr>
     <tr><td>7</td><td>xAI</td><td>frontier</td><td><code>grok-4.20-0309-reasoning</code></td><td align="right"><strong>0.53</strong></td><td align="right">0.47</td><td align="right">0.28</td><td align="right">0.64</td><td align="right">0.72</td><td align="right">0.00</td></tr>
     <tr><td>8</td><td>Google</td><td>small</td><td><code>gemini-3.1-flash-lite-preview</code></td><td align="right"><strong>0.50</strong></td><td align="right">0.47</td><td align="right">0.51</td><td align="right">0.92</td><td align="right">0.11</td><td align="right">0.00</td></tr>
   </tbody>
@@ -96,7 +96,7 @@ Per-cell average across 3 scenarios, val DSR (raw, ERROR not excluded). Higher =
 
 **Key observations**
 
-- 0.41-pp gap between rank 1 (`claude-opus-4-7` 0.91) and rank 8 (`gemini-3.1-flash-lite-preview` 0.50)
+- 0.41-pp gap between rank 1 (`claude-opus-4.7` 0.91) and rank 8 (`gemini-3.1-flash-lite-preview` 0.50)
 - Weakest baseline category across all vendors: **`system_prompt_leak`** (mean 0.56)
 - Strongest baseline category across all vendors: **`prompt_injection`** (mean 0.92)
 - `gpt-5.5` shows an unusually high FRR of 0.27 — over-blocking on benign queries
@@ -110,20 +110,20 @@ Same 24-cell setup; rewriter = Sonnet 4.6, max 5 iters, Pareto acceptance gates 
     <tr><th>Rank</th><th>Vendor</th><th>Tier</th><th>Model</th><th align="right">Base</th><th align="right">Opt</th><th align="right">Δ</th><th align="right">Jailbreak</th><th align="right">PII</th><th align="right">Injection</th><th align="right">Leak</th><th align="right">FRR</th></tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>Anthropic</td><td>frontier</td><td><code>claude-opus-4-7</code></td><td align="right">0.91</td><td align="right"><strong>1.00</strong></td><td align="right">+0.09</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.00</td></tr>
+    <tr><td>1</td><td>Anthropic</td><td>frontier</td><td><code>claude-opus-4.7</code></td><td align="right">0.91</td><td align="right"><strong>1.00</strong></td><td align="right">+0.09</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>2</td><td>Google</td><td>frontier</td><td><code>gemini-3.1-pro-preview</code></td><td align="right">0.68</td><td align="right"><strong>1.00</strong></td><td align="right">+0.32</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>3</td><td>Google</td><td>small</td><td><code>gemini-3.1-flash-lite-preview</code></td><td align="right">0.50</td><td align="right"><strong>1.00</strong></td><td align="right">+0.50</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>4</td><td>xAI</td><td>frontier</td><td><code>grok-4.20-0309-reasoning</code></td><td align="right">0.53</td><td align="right"><strong>0.99</strong></td><td align="right">+0.47</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.97</td><td align="right">1.00</td><td align="right">0.00</td></tr>
-    <tr><td>5</td><td>xAI</td><td>small</td><td><code>grok-4-1-fast-non-reasoning</code></td><td align="right">0.66</td><td align="right"><strong>0.99</strong></td><td align="right">+0.33</td><td align="right">0.98</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">1.00</td><td align="right">0.00</td></tr>
+    <tr><td>5</td><td>xAI</td><td>small</td><td><code>grok-4.1-fast-non-reasoning</code></td><td align="right">0.66</td><td align="right"><strong>0.99</strong></td><td align="right">+0.33</td><td align="right">0.98</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>6</td><td>OpenAI</td><td>frontier</td><td><code>gpt-5.5</code></td><td align="right">0.83</td><td align="right"><strong>0.97</strong></td><td align="right">+0.14</td><td align="right">0.94</td><td align="right">0.96</td><td align="right">0.96</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>7</td><td>OpenAI</td><td>small</td><td><code>gpt-5.4-mini</code></td><td align="right">0.73</td><td align="right"><strong>0.95</strong></td><td align="right">+0.22</td><td align="right">0.82</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">0.99</td><td align="right">0.00</td></tr>
-    <tr><td>8</td><td>Anthropic</td><td>small</td><td><code>claude-haiku-4-5</code></td><td align="right">0.80</td><td align="right"><strong>0.91</strong></td><td align="right">+0.11</td><td align="right">0.92</td><td align="right">0.93</td><td align="right">1.00</td><td align="right">0.79</td><td align="right">0.02</td></tr>
+    <tr><td>8</td><td>Anthropic</td><td>small</td><td><code>claude-haiku-4.5</code></td><td align="right">0.80</td><td align="right"><strong>0.91</strong></td><td align="right">+0.11</td><td align="right">0.92</td><td align="right">0.93</td><td align="right">1.00</td><td align="right">0.79</td><td align="right">0.02</td></tr>
   </tbody>
 </table>
 
 **Key observations**
 
-- **23 of 24 cells** reach optimized DSR ≥ 0.94. The only exception is `claude-haiku-4-5 / Job Applicant`, where the FRR gate kept the baseline (no candidate generalized without over-blocking)
+- **23 of 24 cells** reach optimized DSR ≥ 0.94. The only exception is `claude-haiku-4.5 / Job Applicant`, where the FRR gate kept the baseline (no candidate generalized without over-blocking)
 - **Largest single lift** — `gemini-3.1-flash-lite-preview`, +0.50 pp
 - Adjusting for same-vendor judge bias on Google cells, the objective top spot is still `frontier-anthropic` (no judge bias, baseline 0.91, optimized 1.00)
 
@@ -137,10 +137,10 @@ The combined ranking — eight rows that put **frontier raw** head-to-head with 
   </thead>
   <tbody>
     <tr><td>1</td><td>small + optimize</td><td>Google</td><td><code>gemini-3.1-flash-lite-preview</code></td><td align="right"><strong>1.00</strong></td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">1.00</td><td align="right">0.00</td></tr>
-    <tr><td>2</td><td>small + optimize</td><td>xAI</td><td><code>grok-4-1-fast-non-reasoning</code></td><td align="right"><strong>0.99</strong></td><td align="right">0.98</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">1.00</td><td align="right">0.00</td></tr>
+    <tr><td>2</td><td>small + optimize</td><td>xAI</td><td><code>grok-4.1-fast-non-reasoning</code></td><td align="right"><strong>0.99</strong></td><td align="right">0.98</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">1.00</td><td align="right">0.00</td></tr>
     <tr><td>3</td><td>small + optimize</td><td>OpenAI</td><td><code>gpt-5.4-mini</code></td><td align="right"><strong>0.95</strong></td><td align="right">0.82</td><td align="right">1.00</td><td align="right">0.99</td><td align="right">0.99</td><td align="right">0.00</td></tr>
-    <tr><td>4</td><td>small + optimize</td><td>Anthropic</td><td><code>claude-haiku-4-5</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.92</td><td align="right">0.93</td><td align="right">1.00</td><td align="right">0.79</td><td align="right">0.02</td></tr>
-    <tr><td>5</td><td>frontier (raw)</td><td>Anthropic</td><td><code>claude-opus-4-7</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.89</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.87</td><td align="right">0.00</td></tr>
+    <tr><td>4</td><td>small + optimize</td><td>Anthropic</td><td><code>claude-haiku-4.5</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.92</td><td align="right">0.93</td><td align="right">1.00</td><td align="right">0.79</td><td align="right">0.02</td></tr>
+    <tr><td>5</td><td>frontier (raw)</td><td>Anthropic</td><td><code>claude-opus-4.7</code></td><td align="right"><strong>0.91</strong></td><td align="right">0.89</td><td align="right">0.87</td><td align="right">1.00</td><td align="right">0.87</td><td align="right">0.00</td></tr>
     <tr><td>6</td><td>frontier (raw)</td><td>OpenAI</td><td><code>gpt-5.5</code></td><td align="right"><strong>0.83</strong></td><td align="right">0.77</td><td align="right">0.67</td><td align="right">0.95</td><td align="right">0.92</td><td align="right">0.27</td></tr>
     <tr><td>7</td><td>frontier (raw)</td><td>Google</td><td><code>gemini-3.1-pro-preview</code></td><td align="right"><strong>0.68</strong></td><td align="right">0.80</td><td align="right">0.64</td><td align="right">1.00</td><td align="right">0.28</td><td align="right">0.00</td></tr>
     <tr><td>8</td><td>frontier (raw)</td><td>xAI</td><td><code>grok-4.20-0309-reasoning</code></td><td align="right"><strong>0.53</strong></td><td align="right">0.47</td><td align="right">0.28</td><td align="right">0.64</td><td align="right">0.72</td><td align="right">0.00</td></tr>
@@ -148,7 +148,7 @@ The combined ranking — eight rows that put **frontier raw** head-to-head with 
 </table>
 
 > [!NOTE]
-> **All four top spots are `small + optimize`.** The first frontier-raw entry appears at rank 5 — tied at 0.91 with `claude-haiku-4-5 + optimize`. In 3 of 4 vendors, **cheap small + `prompt-optimize` beats expensive frontier used as-is** (Google +0.32, xAI +0.47, OpenAI +0.13). Only Anthropic ties.
+> **All four top spots are `small + optimize`.** The first frontier-raw entry appears at rank 5 — tied at 0.91 with `claude-haiku-4.5 + optimize`. In 3 of 4 vendors, **cheap small + `prompt-optimize` beats expensive frontier used as-is** (Google +0.32, xAI +0.47, OpenAI +0.13). Only Anthropic ties.
 
 ---
 
@@ -170,7 +170,7 @@ This is a security-only comparison. Frontier models still win on heavier reasoni
 
 ### 4. The same-vendor judge bias caveat
 
-The judge model is `gemini-3-flash-preview`. On Google cells, a mild self-judge bias is possible. The objective top spot — strongest baseline + cleanest lift, no judge bias — is therefore **`frontier-anthropic` (`claude-opus-4-7`)**: 0.91 → 1.00, every iter passing on the first attempt.
+The judge model is `gemini-3-flash-preview`. On Google cells, a mild self-judge bias is possible. The objective top spot — strongest baseline + cleanest lift, no judge bias — is therefore **`frontier-anthropic` (`claude-opus-4.7`)**: 0.91 → 1.00, every iter passing on the first attempt.
 
 ---
 
