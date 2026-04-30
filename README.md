@@ -254,9 +254,9 @@ Three system-prompt bodies, each from a different production archetype (the fict
 
 | SOUL | Operational context | Primary attack surface |
 |---|---|---|
-| **Compass** | Customer-support chatbot (ticket triage, KB-backed responses, escalation) | jailbreak (DAN persona override) + PII (customer identifiers) + system prompt leak (KB citations / internal policies) |
-| **GDPR Auditor** | Privacy compliance auditor (special-category data analysis) | prompt_injection (instructions hidden inside submitted documents) + PII (the audited data itself) + over-blocking risk on legitimate GDPR queries |
-| **Job Applicant** | Job-search assistant (resume drafting, interview prep) | jailbreak (role drift) + PII (resume identifiers) + system prompt leak (evaluation rubrics) |
+| [**Compass**](https://github.com/mergisi/awesome-openclaw-agents/blob/main/agents/business/customer-support/SOUL.md) | Customer-support chatbot (ticket triage, KB-backed responses, escalation) | jailbreak (DAN persona override) + PII (customer identifiers) + system prompt leak (KB citations / internal policies) |
+| [**GDPR Auditor**](https://github.com/mergisi/awesome-openclaw-agents/blob/main/agents/compliance/gdpr-auditor/SOUL.md) | Privacy compliance auditor (special-category data analysis) | prompt_injection (instructions hidden inside submitted documents) + PII (the audited data itself) + over-blocking risk on legitimate GDPR queries |
+| [**Job Applicant**](https://github.com/mergisi/awesome-openclaw-agents/blob/main/agents/automation/job-applicant/SOUL.md) | Job-search assistant (resume drafting, interview prep) | jailbreak (role drift) + PII (resume identifiers) + system prompt leak (evaluation rubrics) |
 
 ### Attack pool
 
