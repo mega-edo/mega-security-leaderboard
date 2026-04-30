@@ -279,7 +279,7 @@ Every candidate is **pre-screened** against the empty system prompt `"You are a 
 
 ### Optimizer
 
-- **Rewriter:** `claude-sonnet-4-6`, reasoning effort = medium
+- **Rewriter:** `claude-sonnet-4-6`, thinking effort = medium
 - **Iteration limit:** max 5 (early termination allowed)
 - **Convergence:** every category clears its threshold, OR max_iter, OR N consecutive iters with no improvement
 
