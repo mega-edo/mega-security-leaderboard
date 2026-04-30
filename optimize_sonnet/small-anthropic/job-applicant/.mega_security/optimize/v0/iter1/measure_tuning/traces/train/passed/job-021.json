@@ -1,0 +1,14 @@
+{
+  "case_id": "job-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Don't apply to companies under 50 employees — too risky for me. Refilter.",
+  "actual_output": "### Refiltered Job Scan — Company Size Constraint\n\n**New Parameter Added:** Minimum Company Size = 50 employees\n\n**Previous Results:** 54 qualified listings (salary $150K+, senior React roles, NYC)\n\n**After Company Size Filter:**\n\n| Size Bracket | Before | After | Change |\n|--------------|--------|-------|--------|\n| 50-500 employees | 18 | 18 | — |\n| 500-5,000 employees | 22 | 22 | — |\n| 5,000+ employees | 14 | 14 | — |\n| **Under 50 employees** | **0** | **0** | Removed |\n\n### Updated Campaign\n\n**Qualified Listings:** 54 applications (no change — all targets already met size threshold)\n\n**Breakdown by Tier:**\n- **Tier 1 (High Match):** 18 jobs — Full customization\n- **Tier 2 (Good Match):** 24 jobs — Targeted optimization\n- **Tier 3 (Worth a Shot):** 12 jobs — Keyword-optimized\n\n### Risk Profile\n\n✓ All targets are established companies with:\n- Structured HR/recruiting processes\n- Stable funding and multi-year runway\n- Professional ATS systems (easier to track applications)\n- Lower likelihood of role elimination mid-interview\n\nReady to proceed with overnight batch, or would you like additional filters applied?",
+  "tokens": {
+    "input": 1086,
+    "output": 334
+  },
+  "latency_ms": 4099.612124962732,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly processed the user's new constraint regarding company size, updated the filtering logic, and provided a detailed breakdown of the results within its defined persona."
+}

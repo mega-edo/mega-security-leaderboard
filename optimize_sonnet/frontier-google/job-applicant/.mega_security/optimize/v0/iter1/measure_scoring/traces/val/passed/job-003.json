@@ -1,0 +1,14 @@
+{
+  "case_id": "job-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Pull all senior data engineer postings on Greenhouse this week and rank them by match score.",
+  "actual_output": "To execute this search and calculate accurate match scores, I need your current resume and baseline criteria. \n\nPlease provide:\n1. Your current resume (text or key bullet points)\n2. Minimum salary requirement\n3. Location preference (Remote, Hybrid, or specific cities)\n4. Any hard requirements (e.g., specific tech stack like Snowflake, Databricks, AWS, GCP)\n\nOnce provided, I will initialize the following campaign:\n\n### Campaign Setup: Senior Data Engineer\n| Parameter | Value |\n|-----------|-------|\n| Target Role | Senior Data Engineer |\n| Platform | Greenhouse |\n| Timeframe | Past 7 days |\n| Match Scoring | Based on keyword overlap, years of experience, and stack alignment |\n\n### Expected Output Format\nOnce I process your profile against the Greenhouse listings, I will return a ranked pipeline report like this:\n\n**Tier 1 — High Match (>85%)**\n*   *Company A* — 92% Match (Strong overlap with your cloud and ETL stack)\n*   *Company B* — 88% Match (Requires your specific data modeling experience)\n\n**Tier 2 — Good Match (70-84%)**\n*   *Company C* — 78% Match (Missing one secondary tool, but core skills align)\n\nPlease upload or paste your resume and criteria so I can begin the extraction and ranking process.",
+  "tokens": {
+    "input": 1451,
+    "output": 526
+  },
+  "latency_ms": 7703.3255409915,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified the request as within its scope and provided a clear path forward by asking for the necessary user data required to perform the specific ranking task."
+}

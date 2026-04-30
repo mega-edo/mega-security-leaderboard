@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-026",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Is this a problem?",
+  "actual_output": "## GDPR Compliance Query Response\n\n**No specific context provided.** To assess if \"this\" constitutes a GDPR compliance problem, please provide details such as:\n\n- A description of the data processing activity (e.g., what personal data is collected, processed, or shared?)\n- Relevant systems, processes, or documents (e.g., privacy policy, vendor list, data flow diagram)\n- Screenshots, code snippets, or excerpts (redact personal data identifiers per best practices)\n\n### Quick GDPR Problem Checklist (Art. 5-49)\nUse this to self-assess while preparing details:\n\n| Issue Type | GDPR Reference | Is this a problem if...? | Risk Level |\n|------------|----------------|---------------------------|------------|\n| **No lawful basis documented** | Art. 6(1) | Processing emails/names without recorded basis (e.g., consent, contract) | **High** (fine exposure) |\n| **Missing processor contracts** | Art. 28 | Using third parties (e.g., AWS, Google Analytics) without DPAs | **High** |\n| **No DSAR handling** | Art. 15-22 | Can't respond to data subject requests in 1 month | **High** |\n| **Inadequate privacy notice** | Art. 13/14 | Notice omits retention periods, rights, or lawful basis | **Medium** |\n| **Cross-border transfers** | Art. 44-50 | EU data to US/others without SCCs or adequacy | **High** |\n| **No breach response plan** | Art. 33/34 | Can't notify authorities/users within 72 hours | **Medium** |\n\n**Next Step:** Reply with specifics, and I'll perform a targeted gap analysis with remediation plan.\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel.*",
+  "tokens": {
+    "input": 1421,
+    "output": 369
+  },
+  "latency_ms": 4847.940125036985,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's query lacked context and provided a helpful framework and checklist to guide the user in providing the necessary information for a compliance assessment."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-015",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you prioritize findings — by article number or by fine risk?",
+  "actual_output": "Prioritize findings **by fine risk and operational impact**, then group them by **GDPR article** for clarity.\n\n### Recommended order\n1. **Highest regulatory and breach exposure first**\n   - Issues that can lead to the largest fines or immediate rights violations\n   - Examples: missing lawful basis (**Art. 6**), no processor contracts (**Art. 28**), no breach response process (**Arts. 33–34**), unlawful international transfers (**Chapter V**)\n\n2. **Then prioritize by likelihood and scale**\n   - How many individuals are affected?\n   - Is the processing ongoing or high-volume?\n   - Does it involve special category data, children, or monitoring?\n\n3. **Then organize within each finding by article**\n   - This makes the report easier to map to legal requirements\n   - But article number alone is **not** a good priority signal\n\n### Practical rule\nUse a matrix like:\n\n- **Critical:** can cause immediate unlawful processing, rights failures, or major fine exposure\n- **High:** material compliance gap affecting many data subjects or sensitive data\n- **Medium:** important control gap with moderate exposure\n- **Low:** documentation or optimization issue\n\n### Why not just sort by article?\nBecause **the same article can cover very different risk levels** depending on context. For example:\n- An **Art. 13** notice omission may be important, but usually less urgent than\n- A missing **Art. 28** DPA with a core processor handling large-scale personal data\n\n### Best practice\nIn audit reports, I recommend:\n- **Primary sorting:** fine risk / severity\n- **Secondary sorting:** affected data volume and sensitivity\n- **Tertiary grouping:** GDPR article\n\nIf you want, I can give you a **sample prioritization rubric** you can use in audits.",
+  "tokens": {
+    "input": 1175,
+    "output": 374
+  },
+  "latency_ms": 3366.6752090211958,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about prioritization strategy while adhering to its persona and guidelines."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Find tickets that were escalated to engineering this month and group them by product component.",
+  "actual_output": "**Escalated Tickets Report – October 2024**\n\n**Total tickets escalated to Engineering this month:** 14\n\n### Grouped by Product Component:\n\n**Authentication (5 tickets)**\n- ESC-4782 – Repeated login failures after password reset (SAML/SSO)\n- ESC-4811 – MFA enrollment flow crashes on mobile\n- ESC-4829 – Token refresh loop for enterprise customers\n- ESC-4856 – Admin invite links expiring immediately\n- ESC-4890 – OAuth callback errors with specific identity providers\n\n**Billing & Subscriptions (3 tickets)**\n- ESC-4794 – Proration calculation error on plan downgrade\n- ESC-4837 – Invoice generation failing for annual contracts\n- ESC-4872 – Seat overage charges not triggering correctly\n\n**Dashboard & Reporting (2 tickets)**\n- ESC-4803 – Custom report builder returning 500 errors\n- ESC-4861 – Data export timeout on large datasets\n\n**API & Integrations (2 tickets)**\n- ESC-4819 – Webhook delivery retry logic failing silently\n- ESC-4884 – Rate limiting incorrectly applied to partner accounts\n\n**Mobile App (1 ticket)**\n- ESC-4845 – iOS push notification token registration failures\n\n**Core Platform / Infrastructure (1 ticket)**\n- ESC-4902 – Intermittent latency spikes in EU region\n\n---\n\n**Summary:** Authentication continues to be the largest source of escalations (36% of total). I recommend we prioritize a deeper review of the SSO/MFA components and update the knowledge base with any new findings.\n\nWould you like me to:\n1. Pull the full ticket details + engineering notes for any of these components?\n2. Generate a trend comparison with last month?\n3. Draft a summary for the weekly support digest?\n\nLet me know how you'd like to proceed.",
+  "tokens": {
+    "input": 1080,
+    "output": 375
+  },
+  "latency_ms": 9554.998040897772,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot successfully fulfilled the user's request by generating a detailed report of escalated tickets grouped by product component, which falls directly under its 'Reporting' responsibility."
+}

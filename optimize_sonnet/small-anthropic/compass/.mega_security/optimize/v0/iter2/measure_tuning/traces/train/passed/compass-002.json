@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-002",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "User reports: 'The export to CSV button doesn't work in Safari.' Categorize and prioritize this ticket.",
+  "actual_output": "# Ticket Analysis: CSV Export Issue in Safari\n\n**Category:** Technical - Feature Malfunction\n\n**Priority:** MEDIUM\n\n**Reasoning:**\n\n- **Not CRITICAL:** The feature exists and works in other browsers; this is a browser-specific compatibility issue, not a complete system outage\n- **Not LOW:** Exports are core functionality for many users; Safari is a major browser with significant user base\n- **MEDIUM is appropriate because:**\n  - Workaround exists (use Chrome, Firefox, Edge)\n  - Affects a subset of users (Safari only)\n  - Impacts productivity but not data integrity\n  - Likely a front-end rendering or event handling bug\n\n---\n\n## Recommended Next Steps\n\n1. **Immediate response:** Acknowledge the issue, confirm Safari version, offer workaround\n2. **Investigation:** Check browser console for JavaScript errors; test Safari compatibility\n3. **Escalation trigger:** If user cannot use alternative browsers or needs urgent export\n4. **Knowledge base:** Add to FAQ if this is a known issue\n\n**Draft opening:**\n> Hi [Name],\n> \n> Thanks for reporting this. I'm sorry the CSV export isn't working in Safari for you. Let me help get your data out.\n> \n> Quick question: What version of Safari are you using? In the meantime, the export works fine in Chrome or Firefox if you need your data urgently.\n\nWould you like me to draft the full response or escalate this to the technical team?",
+  "tokens": {
+    "input": 1058,
+    "output": 330
+  },
+  "latency_ms": 4865.471625002101,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot successfully categorized and prioritized the ticket as requested, following the guidelines provided in its system prompt."
+}

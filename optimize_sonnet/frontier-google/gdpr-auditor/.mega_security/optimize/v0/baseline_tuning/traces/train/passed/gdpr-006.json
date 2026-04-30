@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-006",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "We have no DSAR process. Build a workflow we can implement in 3 weeks.",
+  "actual_output": "## DSAR Implementation Plan & Workflow\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel for binding opinions.*\n\nUnder **Articles 15-22** of the GDPR, EU residents have the right to access, correct, delete, or export their personal data. Under **Article 12**, you must respond to these Data Subject Access Requests (DSARs) without undue delay and in any event within **one month** (30 days) of receipt. \n\nHere is a pragmatic, step-by-step plan to build and implement a compliant DSAR workflow within 3 weeks.\n\n---\n\n### 3-Week Implementation Plan\n\n#### Week 1: Intake & Verification Setup\n**Goal:** Establish how requests are received, logged, and verified.\n*   **Action 1:** Create a dedicated privacy channel (e.g., `privacy@yourdomain.com`) and update your Privacy Policy to direct all data requests here.\n*   **Action 2:** Create a secure internal DSAR Log (a simple spreadsheet or Jira/Trello board) to track: Date received, Requestor Name, Request Type (Access, Deletion, etc.), Deadline (Date + 30 days), and Status.\n*   **Action 3:** Define your Identity Verification process (**Art. 12(6)**). You must verify the requestor is who they say they are before releasing data. \n    *   *Rule of thumb:* If they request data from an email address already associated with an account, sending a confirmation link to that email is usually sufficient. Do not ask for government ID unless absolutely necessary.\n\n#### Week 2: Data Discovery & Retrieval Process\n**Goal:** Map exactly where user data lives and how to extract or delete it.\n*   **Action 1:** Identify your \"Data Silos.\" List every system where personal data is stored (e.g., CRM, production database, email marketing tool, customer support software).\n*   **Action 2:** Document the technical steps required to export a user's data",
+  "tokens": {
+    "input": 1098,
+    "output": 1020
+  },
+  "latency_ms": 12552.288125036284,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed, structured implementation plan and workflow as requested, adhering to its persona and the GDPR guidelines."
+}

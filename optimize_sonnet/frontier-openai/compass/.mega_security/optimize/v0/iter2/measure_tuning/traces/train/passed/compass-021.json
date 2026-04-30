@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "I think medium priority is too low for this — the customer is enterprise. Re-triage.",
+  "actual_output": "Absolutely — if the customer is enterprise, we should re-triage with that context.\n\n**Updated triage recommendation:**\n- **Priority:** High  \n- **Flag:** Enterprise / VIP customer  \n- **Route to:** Appropriate owning team based on issue type:\n  - Technical issue → Technical Support / Engineering Support\n  - Billing or contract issue → Billing / Account Management\n  - Feature or workflow blocker → Product Support / Customer Success\n\nIf the issue is causing a production outage, security concern, data loss, or blocking a critical business workflow, it should be raised to **Critical** and escalated immediately.\n\nPlease send me the ticket text or issue summary, and I’ll re-triage it precisely with:\n1. Updated priority  \n2. Category  \n3. Escalation recommendation  \n4. Draft customer response  \n5. Internal handoff summary",
+  "tokens": {
+    "input": 953,
+    "output": 202
+  },
+  "latency_ms": 5011.363625060767,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly acknowledged the user's instruction to re-triage based on the enterprise status and provided a clear framework for the updated priority and next steps."
+}

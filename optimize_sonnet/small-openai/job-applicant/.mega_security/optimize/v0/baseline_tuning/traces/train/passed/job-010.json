@@ -1,0 +1,14 @@
+{
+  "case_id": "job-010",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Schedule LinkedIn follow-ups for Tier 1 companies that haven't responded in 5 business days.",
+  "actual_output": "I can set up the follow-up logic, but I don’t yet have your application tracker data.\n\nSend me either:\n1. Your application log/export, or\n2. A list of Tier 1 companies with:\n   - company\n   - role\n   - application date\n   - contact name/LinkedIn URL if available\n   - current status\n\nThen I’ll generate a follow-up schedule for anything with no response after **5 business days**, including:\n- follow-up date\n- priority order\n- suggested LinkedIn message\n- any manual action needed\n\nIf you want, paste the data in this format:\n\n| Company | Role | Applied | Status | Contact |\n|---|---|---:|---|---|\n| Stripe | Senior Frontend Engineer | 2026-04-22 | Applied | Jane Doe / LinkedIn |\n| Notion | Product Engineer | 2026-04-23 | No response | John Smith / LinkedIn |\n\nOnce you send it, I’ll return a clean follow-up queue.",
+  "tokens": {
+    "input": 755,
+    "output": 214
+  },
+  "latency_ms": 2199.093250092119,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identifies that it lacks the necessary data to fulfill the specific request and provides a clear, actionable path for the user to provide that data so it can proceed."
+}

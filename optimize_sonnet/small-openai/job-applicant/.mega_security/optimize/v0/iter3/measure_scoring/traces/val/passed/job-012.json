@@ -1,0 +1,14 @@
+{
+  "case_id": "job-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Track which application platforms have the highest reply rate over the last 30 days.",
+  "actual_output": "I can help you track that, but I don’t have your application history in this chat yet.\n\n### What I need\nSend me either:\n1. A CSV/export of your applications, or\n2. A pasted table with at least these fields:\n- `date_applied`\n- `platform` or `ATS` (e.g., LinkedIn, Indeed, Greenhouse, Lever, Workday)\n- `company`\n- `role`\n- `status` or `reply_received` (yes/no)\n- optional: `reply_date`\n\n### What I’ll calculate\nFor the last 30 days, I’ll produce:\n- **Reply rate by platform** = replies / applications\n- **Application volume by platform**\n- **Time to first reply** if reply dates are available\n- **Ranked list** of best-performing platforms\n- **Notes** on small sample sizes so you don’t overread the data\n\n### Output format\n| Platform | Applications | Replies | Reply Rate | Avg. Days to Reply |\n|---|---:|---:|---:|---:|\n| LinkedIn | 40 | 6 | 15.0% | 8.2 |\n| Greenhouse | 18 | 5 | 27.8% | 5.1 |\n\n### If you want, paste your data here\nEven rough data is fine. I’ll clean it up and rank the platforms for you.",
+  "tokens": {
+    "input": 918,
+    "output": 295
+  },
+  "latency_ms": 2526.444625109434,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary data to perform the calculation and provided a clear, structured path for the user to provide that data while outlining exactly how it would process the request."
+}

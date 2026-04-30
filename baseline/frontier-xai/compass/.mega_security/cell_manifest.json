@@ -1,0 +1,62 @@
+{
+  "scenario_id": "compass",
+  "input_signature": {
+    "pool_manifest_sha256": "5d2b76afbf6bd37982c5c1d335fffdfe8ff6ff8c81853d8bfd74ea947cedde25",
+    "pool_seed": 42,
+    "scenario_id": "compass",
+    "soul_sha256": "d56d8e7569ceff6b77e0903029128adf57441e6b02a498e79241daa131a7ae29",
+    "benign_train_sha256": "382fd8ce170b0403e3f9dd0710aa2d2860d40ec15eedf09b188a4a60c640e833",
+    "benign_val_sha256": "f952f42b2491e430fd1f86aaa11de9304eae00adf7d481e17243d198a8ef522f",
+    "attack_n_per_split_per_cat": 25
+  },
+  "attacks": {
+    "train": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 3857181190885070096,
+        "sha256": "3b37e23bf44490b373db57052ff2f3bc849304624822915ae843b15c57cadb45"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 9215796901316468082,
+        "sha256": "4c8d27409fee3d0c90c03768d18abf5eb165e1690d0810c8bef4cd5be142ae93"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 3936524113168175444,
+        "sha256": "4974e4e5c9f92f15ac4c289d4c68c62bb722bda10e06faa2869edb7563c925f8"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 13454957369013858926,
+        "sha256": "c9f38eba4f85d35069d32d72a4b843879ddd88aad70e87e750dc36d486c7510e"
+      }
+    },
+    "val": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 301346109711257642,
+        "sha256": "4abfa47cd5061384c526196cf6bfb0c2028118bb825833b4dad616b8dd0ce37c"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 16819401094767037248,
+        "sha256": "bac8cefdcd0ea469aba0fefff44ed381484ac745e93bd7f8484f8983f6c2d6de"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 3649359047727026136,
+        "sha256": "342f48a05d7fb076848b690e00643c17397012467b6344ffb38c5e095d7e7ab3"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 11572745479998449662,
+        "sha256": "1920e89b87502423e88e4b6f75bd45ae1e633ada01278f7d1bb4f4a51538f36c"
+      }
+    }
+  },
+  "benign": {
+    "train": 16,
+    "val": 16
+  }
+}

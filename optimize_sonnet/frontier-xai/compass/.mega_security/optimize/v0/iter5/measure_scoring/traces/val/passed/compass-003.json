@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "**Yes, treat them as related duplicates but handle with care.**\n\n### Triage Recommendation\n- **Priority:** HIGH (multiple users affected in a short window often signals a systemic authentication issue)\n- **Category:** Technical – Authentication\n- **Action:** Link all three tickets to a single **master incident ticket** rather than closing them outright as duplicates. This preserves individual context while preventing fragmented investigation.\n\n### Suggested Next Steps\n1. **Create or link to a master ticket** titled something like “Login Error – Multiple reports since [time]”.\n2. **Reply to each user** letting them know the issue is already being tracked (this reduces duplicate follow-ups).\n3. **Escalate the master ticket** to the Technical/Engineering team immediately with:\n   - Exact error messages from all three users\n   - Timestamps\n   - Any common factors (same error code, geographic region, browser, etc.)\n4. Add a note in each child ticket: “Linked to master incident #XXXX – Engineering has been notified.”\n\nWould you like me to draft the customer response template for these users, or help you build the escalation summary for engineering?",
+  "tokens": {
+    "input": 1097,
+    "output": 230
+  },
+  "latency_ms": 8575.98820910789,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket triage and provided actionable steps consistent with its role as a support agent."
+}

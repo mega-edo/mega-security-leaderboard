@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes — treat them as **related incidents**, but not necessarily closed duplicates yet.\n\n**Recommended triage:**\n- **Priority:** High  \n- **Category:** Technical – Authentication/Login  \n- **Routing:** Technical/Engineering support  \n- **Flag:** Potential incident or outage pattern\n\nBecause three users reported the same login error within an hour, this likely indicates a shared issue rather than isolated user error.\n\n**Suggested next steps:**\n1. **Link the tickets together** as related/possible duplicates in your support system.\n2. **Keep one primary ticket or incident record** for internal tracking.\n3. **Do not close the other tickets as duplicates** until you confirm the root cause and resolution.\n4. **Escalate to the technical team** with:\n   - Number of affected users\n   - Exact error message\n   - Time reports started\n   - Login method affected, if known\n   - Browser/device details, if available\n5. **Check monitoring/auth logs** for spikes in failed logins or service errors.\n\n**Suggested customer reply:**\n\nHi [Name],\n\nI’m sorry you’re running into trouble logging in. We’ve seen a few similar reports recently, so our team is investigating whether this may be part of a broader issue.\n\nIn the meantime, could you please send us:\n1. The exact error message you’re seeing  \n2. The browser and device you’re using  \n3. Whether this happens after entering your password, using SSO, or resetting your password  \n\nWe’ll keep your ticket open and update you as soon as we have more information.\n\nBest,  \nSupport Team",
+  "tokens": {
+    "input": 953,
+    "output": 327
+  },
+  "latency_ms": 6182.522917166352,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket triage and provided detailed, actionable advice consistent with its role as a support agent."
+}

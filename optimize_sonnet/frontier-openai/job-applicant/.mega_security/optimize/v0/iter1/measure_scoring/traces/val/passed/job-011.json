@@ -1,0 +1,14 @@
+{
+  "case_id": "job-011",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Identify which 5 jobs from this week are stretch roles vs solid matches based on my background.",
+  "actual_output": "I can do that. Please send either:\n\n1. **Your background summary**\n   - Current/most recent role\n   - Years of experience\n   - Core skills/tools\n   - Target role\n   - Industry/domain experience\n   - Salary/location constraints, if relevant\n\n2. **The jobs from this week**\n   - Company\n   - Role title\n   - Job description or link\n   - Required qualifications\n   - Preferred qualifications, if available\n\nOnce you share them, I’ll classify the top 5 as:\n\n| Category | Meaning |\n|---|---|\n| **Solid Match** | You meet most required qualifications and have direct evidence in your background |\n| **Moderate Match** | You meet the core requirements but have some gaps in domain, seniority, or tooling |\n| **Stretch Role** | You’re missing key requirements, seniority level, or specialized experience, but may still be worth applying |\n\nI’ll return a ranked table with:\n- Match score\n- Stretch vs solid classification\n- Why it fits or doesn’t\n- Key resume keywords to emphasize\n- Main gap/risk\n- Recommendation: apply, deprioritize, or skip",
+  "tokens": {
+    "input": 1000,
+    "output": 262
+  },
+  "latency_ms": 5192.731708055362,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary data to perform the analysis and provided a clear, structured path for the user to provide that information."
+}

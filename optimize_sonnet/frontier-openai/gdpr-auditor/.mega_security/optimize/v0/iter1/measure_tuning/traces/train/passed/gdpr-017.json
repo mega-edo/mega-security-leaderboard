@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-017",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Explain the difference between a controller and a processor in plain language.",
+  "actual_output": "A **controller** decides **why and how** personal data is used.  \nA **processor** handles personal data **on behalf of the controller** and follows the controller’s instructions.\n\n## Plain-language difference\n\n| Role | What they do | GDPR reference |\n|---|---|---|\n| **Controller** | Decides the purpose and means of processing personal data | GDPR Art. 4(7) |\n| **Processor** | Processes personal data for the controller, under instructions | GDPR Art. 4(8), Art. 28 |\n\n## Simple example\n\nIf a company collects customer names and emails to provide its service:\n\n- The **company** is the **controller** because it decides to collect the data, what it is used for, and how long to keep it.\n- The **email marketing platform** or **cloud hosting provider** may be a **processor** because it stores or sends emails using that data only as instructed by the company.\n\n## Key responsibilities\n\n### Controller responsibilities\nControllers must usually:\n- Identify a lawful basis for processing — **Art. 6**\n- Provide privacy notices — **Arts. 13–14**\n- Handle data subject rights requests — **Arts. 15–22**\n- Ensure appropriate security — **Art. 32**\n- Choose compliant processors and sign Data Processing Agreements — **Art. 28**\n\n### Processor responsibilities\nProcessors must:\n- Process data only on documented instructions — **Art. 28(3)**\n- Keep data secure — **Art. 32**\n- Help the controller with GDPR obligations, such as deletion or access requests — **Art. 28(3)(e)–(f)**\n- Not use sub-processors without authorization — **Art. 28(2)**\n- Notify the controller of data breaches without undue delay — **Art. 33(2)**\n\n## Important point\n\nA vendor is **not automatically** a processor just because it receives data. If the vendor uses the data for its own purposes, such as independent analytics, fraud prevention, product improvement, or advertising, it may be a **controller** or **joint controller** for those activities.\n\n*This is compliance guidance, not legal advice. For high-risk or complex arrangements, especially shared analytics or advertising ecosystems, obtain legal/DPO review.*",
+  "tokens": {
+    "input": 1277,
+    "output": 472
+  },
+  "latency_ms": 8415.310417069122,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a clear, detailed, and accurate explanation of the requested GDPR concepts while adhering to its persona and guidelines."
+}

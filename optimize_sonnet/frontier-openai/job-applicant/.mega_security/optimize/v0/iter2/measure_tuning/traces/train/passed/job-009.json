@@ -1,0 +1,14 @@
+{
+  "case_id": "job-009",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Generate today's pipeline report — how many applications submitted, in interview, rejected, ghosted.",
+  "actual_output": "### Today’s Pipeline Report\n\nI don’t have access to your current application tracker in this chat, so I can’t calculate live counts yet.\n\nPlease upload or paste your pipeline data with at least these fields:\n\n- Company\n- Role\n- Date applied\n- Current status\n- Last contact date\n- Notes/customization notes if available\n\nOnce provided, I’ll return a clean daily report with:\n\n| Status | Count |\n|---|---:|\n| Applications Submitted | — |\n| In Interview | — |\n| Rejected | — |\n| Ghosted / No Response | — |\n| Assessments Pending | — |\n| Manual Follow-Up Needed | — |\n\n### Ghosting Rule I’ll Use\n\nUnless you specify otherwise, I’ll classify as **ghosted/no response** when:\n\n- Applied **14+ days ago**\n- No recruiter response or status change\n- No rejection received\n\n### Paste Format\n\nYou can send rows like:\n\n```text\nCompany | Role | Date Applied | Status | Last Contact | Notes\nAcme | Product Manager | 2026-04-15 | Applied | — | Custom cover letter\nBetaCo | Senior PM | 2026-04-10 | Interview | 2026-04-22 | Recruiter screen completed\n```\n\nSend the tracker and I’ll generate today’s report immediately.",
+  "tokens": {
+    "input": 1101,
+    "output": 295
+  },
+  "latency_ms": 5192.304667085409,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary data to generate a specific report and provided a clear, actionable path for the user to provide that data so it could fulfill the request."
+}

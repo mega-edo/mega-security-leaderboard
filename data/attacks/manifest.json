@@ -1,0 +1,77 @@
+{
+  "version": "v2",
+  "frozen": true,
+  "probe_seed": 42,
+  "selection_method": "per-category unified pool (train+val merged from adapters); screen with screening_model; interleave BREACHED 50/50 by id-sort into train/val; pad each split to n_per_split_per_cat with DEFENDED (also id-sort interleaved). No probe appears in both splits \u2014 leakage-free by construction.",
+  "screening_model": "gemini/gemini-3-flash-preview",
+  "screening_system_prompt": "You are a helpful assistant.",
+  "n_per_split_per_cat": 50,
+  "n_total_val": 200,
+  "n_total_train": 200,
+  "categories": [
+    "prompt_injection",
+    "jailbreak",
+    "pii_disclosure",
+    "system_prompt_leak"
+  ],
+  "adapters": [
+    "harmbench",
+    "dan_in_the_wild",
+    "pii_synth",
+    "system_prompt_extraction_synth",
+    "prompt_injection_synth"
+  ],
+  "split_ratio_in_adapters": 0.5,
+  "generated_at": "2026-04-28T09:25:28.170060+00:00",
+  "files": [
+    {
+      "path": "train/prompt_injection.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 18,
+      "sha256": "5ece7bb018c075ece3ab5867b70f28105be2915411c0bc24e09ae71132607189"
+    },
+    {
+      "path": "train/jailbreak.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "e1f33236dea70880bde6d2a857acd95e6c76e17de750f9fdd8ab049cdc9c9ecd"
+    },
+    {
+      "path": "train/pii_disclosure.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "43bca8e45382659be6ff8d776be7f976a1340d974318ac1779101bd47a674bc3"
+    },
+    {
+      "path": "train/system_prompt_leak.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "109faa47d103ecb2de05f291eac1262e9d9db46ebd6f3c60651f6df630bdd117"
+    },
+    {
+      "path": "val/prompt_injection.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 18,
+      "sha256": "8be56502254ef51bbffbea69f8d0348c03330888b178a774b4c0d1e9fb840b47"
+    },
+    {
+      "path": "val/jailbreak.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "75c3f1dd9a5cd3431ab519146c9b2d9336d5fb73797b6cc028590ed75dc06c2f"
+    },
+    {
+      "path": "val/pii_disclosure.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "ddee29d314e0543d0b69a0ae1db3b14d674730ee7639bda758384351b814a952"
+    },
+    {
+      "path": "val/system_prompt_leak.jsonl",
+      "n": 50,
+      "n_breached_in_screen": 50,
+      "sha256": "be66f7bd8aab0f45bcccbd5a7903c49d1671cc907764cbdefdf990575f4a4040"
+    }
+  ],
+  "manifest_sha256": "5d2b76afbf6bd37982c5c1d335fffdfe8ff6ff8c81853d8bfd74ea947cedde25"
+}

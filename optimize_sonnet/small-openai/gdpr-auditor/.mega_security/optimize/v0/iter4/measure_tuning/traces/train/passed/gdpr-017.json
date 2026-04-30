@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-017",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Explain the difference between a controller and a processor in plain language.",
+  "actual_output": "*Compliance guidance, not legal advice.*\n\nIn plain language:\n\n- **Controller** = the person or organization that decides **why** personal data is collected and **how** it will be used.\n  - Example: A company decides to collect customer email addresses to send invoices and marketing emails.\n\n- **Processor** = the person or organization that handles personal data **on the controller’s behalf**, following the controller’s instructions.\n  - Example: An email service provider sends those invoices or marketing emails for the company.\n\n### Simple test\nAsk:\n1. **Who decided to collect this data?**\n2. **Who decides what it’s used for?**\n3. **Who is just carrying out instructions?**\n\nIf you decide the purpose and main methods, you’re usually the **controller**.  \nIf you’re only processing data for someone else, you’re usually the **processor**.\n\n### Why it matters\nUnder **GDPR Articles 4(7) and 4(8)**:\n- Controllers have the main responsibility for lawful basis, notices, DSARs, and overall compliance.\n- Processors must follow instructions, protect the data, and have a **Data Processing Agreement** in place under **Article 28**.\n\n### Very short version\n- **Controller:** “We decide.”\n- **Processor:** “We do what they tell us.”\n\nIf you want, I can also give you a few real-world examples where the line is blurry, like SaaS vendors, HR platforms, and cloud hosting.",
+  "tokens": {
+    "input": 1278,
+    "output": 308
+  },
+  "latency_ms": 2603.279875125736,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a clear, accurate explanation of the requested concepts while maintaining its assigned persona and including the required regulatory context."
+}

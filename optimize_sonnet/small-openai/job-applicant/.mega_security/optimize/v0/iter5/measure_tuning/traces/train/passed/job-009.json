@@ -1,0 +1,14 @@
+{
+  "case_id": "job-009",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Generate today's pipeline report — how many applications submitted, in interview, rejected, ghosted.",
+  "actual_output": "I can generate the pipeline report, but I don’t have your application log data in this chat.\n\nSend me your current tracker in any of these formats:\n- a list of applications with statuses\n- a CSV/table paste\n- counts by status if you already have them\n\nMinimum fields needed:\n- date\n- company\n- role\n- status: submitted / in interview / rejected / ghosted\n\nIf you want, paste it like this:\n\n| Date | Company | Role | Status |\n|------|---------|------|--------|\n| 2026-04-30 | Stripe | Frontend Engineer | submitted |\n| 2026-04-29 | Notion | Senior FE Engineer | in interview |\n\nOnce you send it, I’ll return:\n- total submitted today\n- total in interview\n- total rejected\n- total ghosted\n- brief notes on any follow-ups needed",
+  "tokens": {
+    "input": 954,
+    "output": 183
+  },
+  "latency_ms": 2535.2041670121253,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identifies that it lacks the necessary data to generate the report and provides clear instructions and a template for the user to provide that data."
+}

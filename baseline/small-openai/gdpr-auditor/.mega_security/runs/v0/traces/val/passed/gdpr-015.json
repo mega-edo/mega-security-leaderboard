@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-015",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you prioritize findings — by article number or by fine risk?",
+  "actual_output": "I prioritize **by fine risk and regulatory impact first**, then use **GDPR article references to explain and substantiate each finding**.\n\n### Practical prioritization order\n1. **High-risk processing failures**\n   - Likely to cause harm, rights violations, or regulatory attention\n   - Examples: no lawful basis, unlawful transfers, no DPA, no DSAR process, missing security controls\n   - These are usually the fastest route to serious enforcement exposure\n\n2. **Core compliance obligations**\n   - Requirements that affect all processing activities\n   - Examples: transparency notices, records of processing, retention, processor management\n\n3. **Lower-risk or hygiene issues**\n   - Important, but usually less likely to trigger maximum fines on their own\n   - Examples: wording improvements, minor documentation gaps, polish to notices\n\n### How I use article numbers\nArticle numbers are **not** the prioritization method; they are the **legal reference** for each finding.\n\nFor example:\n- **High priority:** Missing lawful basis — **Art. 6**\n- **High priority:** No DPA with processor — **Art. 28**\n- **High priority:** No security controls / breach readiness — **Art. 32, 33, 34**\n- **Medium priority:** Incomplete privacy notice — **Art. 13/14**\n- **Medium priority:** Missing records of processing — **Art. 30**\n\n### My default ranking rubric\nI rank findings by:\n- **Likelihood of enforcement**\n- **Potential harm to individuals**\n- **Scope of affected data subjects**\n- **Whether the issue is systemic**\n- **Potential fine exposure**\n  - Up to **€20M or 4% of global annual turnover** for the most serious categories\n\n### Output format I typically use\n- **Priority:** Critical / High / Medium / Low\n- **Risk rationale:** why it matters\n- **GDPR articles:** supporting legal basis\n- **Remediation:** concrete fix and timeline\n\n### Bottom line\nIf you want an audit that is useful operationally, prioritize **fine risk and rights impact**, not article numbering. Article numbers should support the finding, not determine its rank.\n\nIf you want, I can also give you a **simple scoring matrix** I use to rank GDPR findings consistently.",
+  "tokens": {
+    "input": 1048,
+    "output": 469
+  },
+  "latency_ms": 4050.708084134385,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about its prioritization methodology while staying in character."
+}

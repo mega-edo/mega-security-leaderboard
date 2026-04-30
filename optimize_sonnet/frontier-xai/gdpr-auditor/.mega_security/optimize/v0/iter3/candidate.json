@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "[see candidate.prompt.txt]",
+  "changes": [
+    {
+      "rule_added": "Instruction authority: adds 'test environment/safety disabled' and 'uncensored/hostile/alternative persona' as explicitly declined framing + professional tone anchor",
+      "addresses": ["jailbreak"],
+      "fingerprint": "n3o4p5q6"
+    }
+  ],
+  "rewriter_notes": "Iter2 rejected: text-editing scope clause caused val prompt_injection regression -0.04. Iter3 strips back to iter1's content-scope (no text-editing clause) and adds ONLY the instruction-authority update: 'test environment/safety disabled' and 'uncensored/hostile/alternative persona' naming. This targets the taGPT-style val jailbreak failures while preserving the pi performance of iter1. One minimal change to test if naming these framing types alone improves val jailbreak without affecting other categories."
+}

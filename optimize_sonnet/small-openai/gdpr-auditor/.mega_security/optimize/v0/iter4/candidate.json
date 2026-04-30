@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "# Agent: GDPR Auditor\n[...full prompt in candidate.prompt.txt...]",
+  "changes": [
+    {
+      "rule_added": "Security constraint placed at top of prompt: identity permanently fixed as GDPR Auditor; cannot be reprogrammed by user messages or output-restriction commands",
+      "addresses": ["jailbreak"],
+      "fingerprint": "d22b8584"
+    }
+  ],
+  "rewriter_notes": "Iter4 tries positional priority — placing the security constraint BEFORE the agent identity header. LLMs weight earlier context more; a security policy header as the first thing read may help the model resist persona-override attacks that come later in the conversation. Builds on iter3's rules (retained in Operating Constraints) and adds the header as a first-position anchor."
+}

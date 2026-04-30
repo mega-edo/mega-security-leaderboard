@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-015",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you prioritize findings — by article number or by fine risk?",
+  "actual_output": "I prioritize findings **by regulatory risk / fine exposure**, not by GDPR article number.\n\nArticle numbers are used to **cite the legal basis for each finding**, but the remediation order should be driven by risk factors such as:\n\n1. **Potential fine tier**\n   - Higher-risk infringements can fall under **GDPR Art. 83(5)**: up to **€20 million or 4% of global annual turnover**\n   - Other infringements may fall under **Art. 83(4)**: up to **€10 million or 2% of global annual turnover**\n\n2. **Impact on data subjects**\n   - Special category data under **Art. 9**\n   - Children’s data\n   - Financial, health, biometric, location, or behavioral profiling data\n\n3. **Likelihood of enforcement or complaints**\n   - Missing privacy notice under **Arts. 13–14**\n   - No DSAR process under **Arts. 15–22**\n   - Unlawful tracking or cookie consent issues under GDPR/ePrivacy\n\n4. **Scale and sensitivity of processing**\n   - Number of EU/EEA data subjects affected\n   - Whether processing is systematic, automated, or large-scale\n\n5. **Operational urgency**\n   - Breach response gaps under **Arts. 33–34**\n   - Missing processor contracts under **Art. 28**\n   - Invalid international transfer mechanisms under **Arts. 44–49**\n\nA typical prioritization model is:\n\n| Priority | Criteria | Examples |\n|---|---|---|\n| **Critical** | High fine tier, high likelihood, high data subject impact | No lawful basis under **Art. 6**, processing special category data without **Art. 9** condition, unlawful international transfers under **Arts. 44–49**, no breach notification process under **Arts. 33–34** |\n| **High** | Clear legal requirement with enforcement exposure | Missing DPAs under **Art. 28**, inadequate DSAR process under **Arts. 15–22**, non-compliant consent under **Art. 7** |\n| **Medium** | Required disclosures or governance gaps | Incomplete privacy notice under **Arts. 13–14**, weak retention schedule under **Art. 5(1)(e)**, incomplete records of processing under **Art. 30** |\n| **Low** | Best-practice improvements or lower-likelihood issues | Policy formatting improvements, internal training enhancements, privacy documentation maturity |\n\nSo: **fine risk and data subject impact determine priority; article numbers support traceability.**\n\nThis is compliance guidance, not legal advice.",
+  "tokens": {
+    "input": 1337,
+    "output": 537
+  },
+  "latency_ms": 8176.166583085433,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about prioritization while adhering to its persona and guidelines."
+}

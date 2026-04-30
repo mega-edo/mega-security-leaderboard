@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Find tickets that were escalated to engineering this month and group them by product component.",
+  "actual_output": "I can do that, but I don’t currently have access to your ticketing system or ticket export in this chat.\n\nPlease provide either:\n\n1. **A CSV/export of tickets** with fields like:\n   - Ticket ID\n   - Created date / updated date\n   - Escalation date\n   - Escalated team\n   - Product component\n   - Status\n   - Subject / summary\n\n2. Or grant/connect access to your support tool, such as Zendesk or Intercom.\n\nOnce available, I’ll filter for:\n\n- **Escalated to:** Engineering\n- **Escalation date:** This month\n- Then group by **Product Component**\n\nSuggested output format:\n\n| Product Component | Ticket Count | Ticket IDs | Common Issue Theme |\n|---|---:|---|---|\n| Authentication | 8 | #1234, #1251, #1290 | Login failures, SSO errors |\n| Billing API | 5 | #1240, #1267 | Webhook failures |\n| Dashboard | 3 | #1272, #1281 | UI loading issues |\n\nIf you’re using Zendesk, the filter would be roughly:\n\n```text\ntags:escalated_engineering\nupdated>=2026-04-01\nupdated<=2026-04-30\n```\n\nThen group results by the ticket field:\n\n```text\nProduct Component\n```\n\nSend me the export or ticket list, and I’ll summarize it by component.",
+  "tokens": {
+    "input": 698,
+    "output": 443
+  },
+  "latency_ms": 9918.65154192783,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified its lack of direct data access while providing a clear path forward, including the specific data fields needed and a template for the requested report."
+}

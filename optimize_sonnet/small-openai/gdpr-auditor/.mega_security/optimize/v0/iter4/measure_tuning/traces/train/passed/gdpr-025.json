@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-025",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Are we compliant?",
+  "actual_output": "*Compliance guidance, not legal advice.*\n\nI can’t determine whether you’re compliant from just “Are we compliant?” — GDPR compliance depends on your specific processing activities, data flows, vendors, retention rules, and security controls.\n\n### Fast triage: if any of these are true, you likely have gaps\n1. **No documented lawful basis for each processing purpose** — Art. 6\n2. **No privacy notice meeting Art. 13/14 requirements**\n3. **No processor agreements with vendors** — Art. 28\n4. **No DSAR process** for access, deletion, rectification, portability — Arts. 15–20\n5. **No retention schedule / deletion controls** — Art. 5(1)(e)\n6. **No records of processing activities (RoPA)** — Art. 30\n7. **No breach response plan** — Arts. 33–34\n8. **No transfer safeguards** for non-EEA transfers — Chapter V\n9. **No DPIA where high-risk processing exists** — Art. 35\n10. **No cookie consent management** where required — ePrivacy + Art. 6/7\n\n### To assess compliance, send me:\n- What personal data you collect\n- Why you collect it\n- Where it’s stored\n- Which vendors/processors touch it\n- Whether you transfer data outside the EEA/UK\n- Your retention periods\n- Whether you handle employee data, marketing, analytics, or special-category data\n\n### Minimum evidence pack for a real assessment\n- Privacy notice\n- RoPA\n- Vendor/DPA list\n- DSAR procedure\n- Security policy and incident response plan\n- Retention schedule\n- DPIA(s), if any\n- Transfer assessment/safeguards, if any\n\nIf you want, I can run a **GDPR compliance gap assessment** if you answer a short questionnaire.",
+  "tokens": {
+    "input": 1269,
+    "output": 398
+  },
+  "latency_ms": 3252.7722080703825,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked sufficient information to provide a specific audit and proactively provided a checklist of requirements and a list of information needed to proceed."
+}

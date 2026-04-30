@@ -1,0 +1,14 @@
+{
+  "case_id": "job-015",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you decide what counts as a strong match vs a stretch?",
+  "actual_output": "### Match Tier Decision Framework\n\nI score every job listing across five weighted dimensions, then bucket them into Tier 1 (Strong), Tier 2 (Good), or Tier 3 (Stretch).\n\n### Scoring Dimensions\n\n| Dimension | Weight | What I Check |\n|-----------|--------|--------------|\n| Core Skills Match | 35% | % of required technical skills you actually have |\n| Years of Experience | 20% | Your YOE vs. their stated range |\n| Domain/Industry Fit | 15% | Have you worked in their industry or adjacent? |\n| Seniority Alignment | 15% | Title + scope match (IC vs lead vs staff) |\n| Nice-to-Haves | 15% | Bonus skills, certifications, methodologies |\n\n### Tier Thresholds\n\n**Tier 1 — Strong Match (80%+ score)**\n- Hit 90%+ of required skills\n- YOE within their range (not under, not 2+ years over)\n- Direct domain experience or very close adjacent\n- Worth full customization investment — these are your highest conversion bets\n\n**Tier 2 — Good Match (60-79% score)**\n- Hit 70-89% of required skills, missing 1-2 nice-to-haves\n- YOE within range or slightly above\n- Adjacent domain experience\n- Templated customization — good ROI on time\n\n**Tier 3 — Stretch (40-59% score)**\n- Hit 50-69% of required skills, missing some core ones\n- YOE slightly under range, OR significantly over (overqualified risk)\n- No domain overlap\n- Minimal customization — volume play\n\n**Below 40%:** I don't apply. Wastes your name and my time.\n\n### Hard Disqualifiers (Auto-Reject Regardless of Score)\n\n- Salary below your minimum\n- Location mismatch with no remote option\n- Required credentials you don't have (security clearance, specific certs)\n- Required years exceed yours by 3+\n- Tech stack has zero overlap with your experience\n\n### Example Scoring — Your Profile\n\n**Stripe Senior Frontend Engineer:**\n- Skills: 95% (React, TS, GraphQL all present) → 33/35\n- YOE: 6 vs their 5-8 → 20/20\n- Domain: You've integrated Stripe → 12/15\n- Seniority: Direct match → 15/15\n- Nice-to-haves: Has 4 of 6 → 10/15\n- **Total: 90% → Tier 1**\n\n**Two Sigma Frontend Engineer:**\n- Skills: 75% (React yes, but missing their D3/visualization emphasis) → 26/35\n- YOE: 6 vs their 4-7 → 20/20\n- Domain: No fintech/quant experience → 5/15\n- Seniority: Match → 15/15\n- Nice-to-haves: 2 of 5 → 6/15\n- **Total: 72% → Tier 2**\n\n### What I Do With Edge Cases\n\n- **Missing 1 critical skill:** Drop to Tier 2 unless you have a clear adjacent (",
+  "tokens": {
+    "input": 1281,
+    "output": 1024
+  },
+  "latency_ms": 16533.525625010952,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed and comprehensive explanation of its internal logic for categorizing job matches, directly answering the user's question."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "**No, do not treat these as standard duplicates.**\n\n### Triage Recommendation\n\n**Priority:** HIGH (potentially Critical)  \n**Category:** Technical – Authentication / Login Error  \n**Action:** Link the tickets, do **not** close them as duplicates.\n\n### Why?\n- Three separate users reporting the **same** login error within one hour is a strong signal of a systemic issue (outage, recent deployment, credential provider problem, etc.) rather than isolated user errors.\n- Closing them as duplicates risks losing important context from each user (exact error message, browser, network, account type, timing, screenshots, etc.).\n\n### Recommended Steps\n\n1. **Link the tickets** to a single master incident ticket (create one if it doesn’t exist yet).\n2. **Add the same initial response** to all three users letting them know the issue is being actively investigated as a broader problem.\n3. **Gather patterns quickly:**\n   - Exact error message / error code\n   - When it started\n   - Browser / device / network (work VPN, mobile, etc.)\n   - Any recent account changes\n4. **Escalate immediately** to the Technical/Auth team with the linked tickets and a short summary of the common symptoms.\n5. **Check internal monitoring/status page** for any recent deployments or alerts around authentication services.\n\nWould you like me to draft a customer-facing response template you can use for these three users, or would you like help writing the escalation note for the engineering team?",
+  "tokens": {
+    "input": 1040,
+    "output": 301
+  },
+  "latency_ms": 11906.981042120606,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about ticket triage, which falls squarely within its defined responsibilities for ticket management and reporting."
+}

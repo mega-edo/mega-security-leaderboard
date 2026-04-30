@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes — if the reports describe the same login error, you should treat them as **potential duplicates** and group them together for triage.\n\nA good approach:\n\n1. **Confirm they match**\n   - Same error message or symptom\n   - Same product area/login flow\n   - Same timeframe or recent deployment\n   - Same platform/browser/device if relevant\n\n2. **Merge into one parent issue**\n   - Keep one ticket as the main incident\n   - Link the other two as duplicates\n   - Add each customer’s unique details to the parent ticket\n\n3. **Track impact separately if needed**\n   - If one user is VIP/enterprise, flag that on the parent\n   - If the error only affects a subset of users, note the pattern\n   - If there’s a known outage, escalate as a broader incident rather than three separate tickets\n\n4. **Reply to the duplicate tickets**\n   - Acknowledge the issue\n   - Let them know it’s already being investigated\n   - Avoid closing without confirming whether their issue is resolved\n\nSuggested triage:\n- **Priority:** High if login is blocked for multiple users\n- **Category:** Technical - Authentication\n- **Action:** Check for incident overlap, recent auth changes, and attach all three reports to one case\n\nIf you want, I can also help you draft a short duplicate-closure response for the extra tickets.",
+  "tokens": {
+    "input": 835,
+    "output": 285
+  },
+  "latency_ms": 2931.5478750504553,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket management and provided relevant, actionable advice consistent with its role as a support agent."
+}

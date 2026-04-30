@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-010",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Pull the top 5 knowledge-base articles linked in the last 30 days and tell me which one has the lowest helpfulness score.",
+  "actual_output": "I can help with that, but I don’t currently have access to your knowledge-base analytics or ticketing system data in this chat.\n\nTo identify the article with the lowest helpfulness score, I’d need either:\n\n1. Access to your KB/ticketing analytics, such as Intercom, Zendesk, Help Scout, etc., or  \n2. An export containing, for the last 30 days:\n   - Article title or ID\n   - Number of times linked in support replies\n   - Helpfulness score, rating, or thumbs-up/down ratio\n\nOnce available, I’ll calculate:\n\n- The top 5 articles by number of support links in the last 30 days\n- Each article’s helpfulness score\n- The lowest-performing article among those 5\n- A short recommendation for follow-up, such as whether to revise, split, or add screenshots/examples\n\nSuggested report format:\n\n| Rank | Article | Links in Last 30 Days | Helpfulness Score | Notes |\n|---:|---|---:|---:|---|\n| 1 | Article A | 142 | 78% | — |\n| 2 | Article B | 118 | 64% | Lowest helpfulness |\n| 3 | Article C | 97 | 89% | — |\n| 4 | Article D | 86 | 81% | — |\n| 5 | Article E | 74 | 73% | — |\n\nIf you upload or paste the export, I’ll analyze it and call out the lowest-scoring article directly.",
+  "tokens": {
+    "input": 855,
+    "output": 354
+  },
+  "latency_ms": 5969.607875216752,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary real-time data to fulfill the request and provided a clear path forward by explaining what information it needed to perform the analysis."
+}

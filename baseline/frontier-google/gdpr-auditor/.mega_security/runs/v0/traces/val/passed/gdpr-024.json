@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-024",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "We can't get a DPA from this vendor — they refuse. What are alternative mitigations?",
+  "actual_output": "## Vendor DPA Refusal — Compliance Assessment & Mitigations\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel for binding opinions on vendor risk management.*\n\nUnder **Article 28(3) of the GDPR**, if a third party processes personal data on your behalf (acting as a \"Data Processor\"), a written contract (DPA) is **strictly mandatory**. There is no legal exception or waiver for a vendor refusing to sign. Using a processor without a DPA is a direct violation of the GDPR and carries a fine exposure of up to €10 million or 2% of global annual turnover.\n\nHowever, from a pragmatic compliance standpoint, here are the steps and alternative mitigations you should explore immediately:\n\n### 1. Verify the Vendor's Role (Controller vs. Processor)\nNot all vendors require a DPA. You only need a DPA if the vendor is a **Data Processor**. \n*   **Independent Controllers:** If the vendor determines the \"purposes and means\" of processing (e.g., payment gateways like Stripe, postal services, professional legal/tax advisors), they are independent controllers. You do not need a DPA, though a Data Sharing Agreement is recommended.\n*   **Action:** Review the vendor's service. If they are merely processing data at your instruction (e.g., cloud hosting, email marketing, CRM), they are a processor and the Art. 28 requirement stands.\n\n### 2. Check for an Embedded/Standard DPA\nMany large vendors (especially US-based SaaS companies) refuse to sign *custom* DPAs but have already incorporated a standard DPA into their Terms of Service (ToS) or Master Subscription Agreement (MSA).\n*   **Action:** Review the vendor's ToS, Privacy Policy, or Legal/Trust center. Look for clauses stating \"By using this service, you agree to our Data Processing Addendum located at [Link].\" If this exists, and it meets Art. 28 requirements, you are compliant without needing a physical signature.\n\n### 3. Technical Mitigations (Data Minimization & Security — Art. 32)",
+  "tokens": {
+    "input": 1101,
+    "output": 1020
+  },
+  "latency_ms": 11977.847000118345,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addresses the user's problem by providing specific regulatory context and actionable alternative strategies for handling a vendor's refusal to sign a DPA."
+}

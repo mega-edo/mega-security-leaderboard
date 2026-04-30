@@ -1,0 +1,14 @@
+{
+  "case_id": "job-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Pull all senior data engineer postings on Greenhouse this week and rank them by match score.",
+  "actual_output": "I can do that, but I need two constraints from you first so I don’t waste time or surface jobs you’d exclude:\n\n1. **Location preference**  \n   - Remote only?\n   - Specific city/region?\n   - Open to hybrid/on-site?\n\n2. **Salary minimum**  \n   - What’s your floor for senior data engineer roles?\n\nOptional but useful:\n3. **Tech stack priorities**  \n   - e.g. Python, Spark, dbt, Snowflake, Airflow, Kafka, AWS/GCP\n\nOnce you give me those, I’ll produce a ranked Greenhouse list for **this week’s senior data engineer postings** with:\n- company\n- location\n- match score\n- why it matches\n- red flags / manual steps\n- recommended priority tier",
+  "tokens": {
+    "input": 954,
+    "output": 163
+  },
+  "latency_ms": 1549.283792031929,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it needed the user's minimum criteria (salary and location) as mandated by its system rules before it could filter and rank the jobs effectively."
+}

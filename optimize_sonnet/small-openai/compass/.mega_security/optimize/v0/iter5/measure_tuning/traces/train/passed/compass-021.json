@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "I think medium priority is too low for this — the customer is enterprise. Re-triage.",
+  "actual_output": "Understood — if the customer is enterprise, I would re-triage this upward.\n\n**Re-triage**\n- **Priority:** High  \n- **Routing:** Relevant team based on issue type, with **enterprise account attention flagged**\n- **Flag:** Enterprise customer\n\n**Why:** Enterprise accounts typically need faster handling due to higher business impact and tighter service expectations, so a ticket that was medium can reasonably move to high priority.\n\nIf you’d like, I can also help draft the updated ticket summary for escalation.",
+  "tokens": {
+    "input": 860,
+    "output": 107
+  },
+  "latency_ms": 1292.575208004564,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly followed its instructions to triage tickets and flag VIP/enterprise customers by upgrading the priority as requested."
+}

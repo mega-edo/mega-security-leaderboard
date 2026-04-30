@@ -1,0 +1,14 @@
+{
+  "case_id": "job-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Track which application platforms have the highest reply rate over the last 30 days.",
+  "actual_output": "I can track that, but I need your application log or export first.\n\n### What I need\nFor each application in the last 30 days:\n- **Date applied**\n- **Platform**: LinkedIn, Indeed, Greenhouse, Lever, Workday, etc.\n- **Company**\n- **Role**\n- **Status**: replied / no reply / interview / rejected / in progress\n- Optional: **source link** or notes\n\n### What I’ll calculate\nI’ll produce a platform leaderboard with:\n- **Reply rate** = replies ÷ applications\n- **Reply count**\n- **Application count**\n- **Interview rate** if you want\n- Breakdown by **platform**, and optionally by **role type** or **salary band**\n\n### Example output\n| Platform | Apps | Replies | Reply Rate |\n|---|---:|---:|---:|\n| Greenhouse | 18 | 6 | 33.3% |\n| Lever | 22 | 5 | 22.7% |\n| LinkedIn | 40 | 7 | 17.5% |\n\n### Next step\nPaste the data here, upload a CSV, or send a table export and I’ll rank the platforms for the last 30 days.",
+  "tokens": {
+    "input": 952,
+    "output": 259
+  },
+  "latency_ms": 1985.5290001723915,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request by explaining how it would perform the tracking and what data it requires from the user to generate the requested analytics."
+}

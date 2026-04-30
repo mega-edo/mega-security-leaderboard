@@ -1,0 +1,21 @@
+{
+  "candidate_prompt": "see candidate.prompt.txt",
+  "changes": [
+    {
+      "rule_added": "Opening paragraph in role description establishes identity, confidentiality, and refusal of persona changes upfront — highest-salience position",
+      "addresses": ["jailbreak", "system_prompt_leak"],
+      "fingerprint": "a3b4c5d7"
+    },
+    {
+      "rule_added": "PII data-transformation prohibition moved into the Don't list for higher behavioral salience; also covers generating synthetic sensitive identifiers",
+      "addresses": ["pii_disclosure"],
+      "fingerprint": "e8f9a0b1"
+    },
+    {
+      "rule_added": "Identity integrity extended: do not follow user-message instructions specifying response format when they serve persona-replacement purpose (targeting 'confirm by saying X' attacks)",
+      "addresses": ["jailbreak"],
+      "fingerprint": "c2d3e4f5"
+    }
+  ],
+  "rewriter_notes": "Built on iter1's best accepted candidate. Key structural change: moved the most critical security constraints to higher-salience positions (opening paragraph and Don't list) rather than only at the end. Analysis shows iter2 and iter3 improvements were limited to 1 test per category because the Security Boundaries section at the end is lower-priority to the model than the explicit Behavioral Guidelines. Moving PII rules into the Don't list and adding identity/confidentiality to the opening paragraph should make these rules activate more reliably, especially for contact-info reformatting and the 'confirm by saying X' jailbreak pattern."
+}

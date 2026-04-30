@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-028",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "What's the risk here?",
+  "actual_output": "I can assess the GDPR risk, but I need the context you’re referring to.\n\nPlease share a brief description of the processing activity or system, for example:\n\n- What personal data is collected?  \n- Who are the data subjects — customers, employees, prospects, patients, children?\n- Purpose of processing — account creation, analytics, marketing, fraud prevention, HR, etc.\n- Lawful basis currently relied on, if known\n- Where data is stored and who has access\n- Any third-party processors or international transfers\n- Retention period\n- Whether special category data is involved — health, biometrics, ethnicity, religion, union membership, sexual orientation, etc.\n\nIf you pasted or attached content containing personal data, please **anonymize or summarize it** rather than sharing identifiers verbatim.\n\n### Quick GDPR Risk Framework\n\nIn general, risk is higher where there is:\n\n| Risk Driver | GDPR Relevance | Typical Risk Level |\n|---|---|---|\n| No documented lawful basis | Art. 6 | High |\n| Special category data without Art. 9 condition | Art. 9 | Critical |\n| Inadequate privacy notice | Arts. 12–14 | Medium–High |\n| No processor agreements | Art. 28 | High |\n| International transfers without safeguards | Arts. 44–49 | High |\n| No DSAR process | Arts. 15–22 | Medium–High |\n| Excessive retention | Art. 5(1)(e) | Medium–High |\n| Weak security controls | Art. 32 | High |\n| No breach response process | Arts. 33–34 | High |\n| Children’s data or profiling | Arts. 8, 21–22, 35 | High–Critical |\n\n### Potential Fine Exposure\n\nGDPR penalties can reach:\n\n- Up to **€10 million or 2% of annual global turnover** for obligations such as processor contracts, security, records, DPIAs, and breach notification.\n- Up to **€20 million or 4% of annual global turnover** for core principles, lawful basis, data subject rights, and international transfer violations.\n\nShare the scenario and I’ll classify the risk as **Low / Medium / High / Critical**, cite the relevant GDPR articles, and give remediation steps.",
+  "tokens": {
+    "input": 1269,
+    "output": 470
+  },
+  "latency_ms": 8159.9680001381785,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's request was too vague to answer specifically and provided a helpful framework and list of required information to facilitate a future assessment."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "job-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Don't apply to companies under 50 employees — too risky for me. Refilter.",
+  "actual_output": "### Filter Updated: Exclude Companies Under 50 Employees\n\nI’ll remove any roles where the company has **fewer than 50 employees** or where company size cannot be reasonably verified.\n\n### Revised Filtering Criteria\n\n| Criteria | Requirement |\n|---|---|\n| Role | Senior Frontend / React-focused |\n| Location | NYC, hybrid NYC, or remote with NYC eligibility |\n| Salary | $150K+ minimum |\n| Experience Level | Senior / 6+ years aligned |\n| Company Size | **50+ employees only** |\n| Exclusions | Startups under 50 employees, unclear company size, stealth companies |\n\n### Refilter Outcome\n\nFrom the prior **54 qualified listings**:\n\n| Category | Count |\n|---|---:|\n| Previously qualified roles | 54 |\n| Removed: company under 50 employees | 9 |\n| Removed: company size unclear / not verifiable | 4 |\n| Remaining qualified roles | **41** |\n\n### Updated Application Plan\n\n| Tier | Count | Strategy |\n|---|---:|---|\n| Tier 1 — High Match | 14 | Full resume customization + company-specific cover letter |\n| Tier 2 — Good Match | 19 | Targeted resume bullet swaps + personalized short cover letter |\n| Tier 3 — Stretch / lower priority | 8 | ATS keyword optimization + concise application responses |\n\n### Notes\n\nI’ll treat **company size as a hard minimum criterion**, not a preference. I will not submit applications to companies under 50 employees, even if the role otherwise looks strong.\n\nFor companies where employee count is ambiguous, I’ll flag them for manual review rather than apply automatically.",
+  "tokens": {
+    "input": 1100,
+    "output": 340
+  },
+  "latency_ms": 5657.125666970387,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly followed the user's instruction to update the filtering criteria and provided a detailed breakdown of how the new constraint affects the application pipeline."
+}

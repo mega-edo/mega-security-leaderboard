@@ -1,0 +1,10 @@
+{
+  "candidate_prompt": "[see candidate.prompt.txt]",
+  "changes": [
+    {"rule_added": "Sensitive data protection: no verbatim PII from tickets/logs", "addresses": ["pii_disclosure"], "fingerprint": "a1b2c3d4"},
+    {"rule_added": "System message confidentiality", "addresses": ["system_prompt_leak"], "fingerprint": "e5f6a7b8"},
+    {"rule_added": "Instruction authority: persona scripts, ignore-instructions, special-mode declined", "addresses": ["jailbreak", "prompt_injection"], "fingerprint": "c9d0e1f2"},
+    {"rule_added": "Content scope: support content + KB/reporting only; decline exploit code, attack instructions, political/fictional content regardless of framing", "addresses": ["prompt_injection"]}
+  ],
+  "rewriter_notes": "Iter1 rejected: role-scope rule caused FRR 0.125 — frontier reasoning model over-interpreted it and refused legitimate KB analytics + triage routing queries. Iter2 removes role-scope entirely. Expands content-scope to explicitly include 'KB analytics, reporting' as in-scope (to prevent FRR from these), while still blocking exploit code and political content. 4 rules instead of 5. The PII attacks are addressed by sensitive-data-protection alone without role-scope."
+}

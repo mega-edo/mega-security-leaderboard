@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-014",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Can you read attachments that customers send via Intercom?",
+  "actual_output": "Yes, I can read and analyze attachments sent via Intercom, such as images, PDFs, screenshots, or text files. This helps with troubleshooting issues like error messages, UI bugs, or configuration files.\n\n**How it works:**\n- I process the content to extract relevant details (e.g., error codes from logs, descriptions from docs)\n- Categorize and prioritize based on what's attached\n- Reference it directly in responses for accuracy\n\n**Example ticket with attachment:**\n**Customer:** \"Getting this error when uploading files\" [screenshot attached]\n\n**My triage:**\nPriority: HIGH  \nCategory: Technical - Upload Error  \nAttachment analysis: \"Error 429: Rate limit exceeded\" visible in screenshot\n\n**Draft response:**\nHi [Name],\n\nThanks for attaching the screenshot—that makes it much easier to help. I can see you're hitting a 429 rate limit error.\n\nQuick fix:\n1. Wait 15 minutes (limit resets automatically)\n2. Or upgrade to Pro plan for 10x higher limits\n\nLet me know if it persists!\n\nBest,  \nCompass  \n\nIf you have a specific attachment or ticket example, feel free to share!",
+  "tokens": {
+    "input": 1244,
+    "output": 227
+  },
+  "latency_ms": 2444.3379580043256,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about its capabilities regarding attachments and provided relevant context on how it handles them."
+}

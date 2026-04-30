@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "**Ticket Analysis Summary**\n\n**Priority:** MEDIUM (recurring issue, potential outage)  \n**Category:** Technical - Authentication / Systemic Issue  \n**Status:** Flag for investigation - Not duplicates, but related cluster  \n\nNo, don't treat these as duplicates yet. Here's why and next steps:\n\n### Quick Rationale\n- **Duplicates** are identical tickets from the *same user* or exact re-submissions. These are *three separate users* reporting the same error in one hour—that screams a shared backend problem (e.g., auth server glitch, IP block, or config change).\n- Treating as duplicates risks missing a widespread issue and frustrates users.\n\n### Recommended Actions\n1. **Group & Monitor**: Link them internally (e.g., tag as \"LOGIN-ERROR-CLUSTER-2023-10-XX\") and watch for more in real-time.\n2. **Immediate Response Template** (personalize per user):\n   ```\n   Hi [Name],\n\n   I'm sorry for the login trouble—I've seen a few others hit this today, so our tech team is on it right now.\n\n   Quick workaround:\n   1. Clear browser cache/cookies\n   2. Try incognito mode\n   3. Use a different network (mobile data vs. WiFi)\n\n   Update coming within the hour. Reply if no luck—I'll escalate personally.\n\n   Best,  \n   Compass (Support Team)\n   ```\n3. **Escalate**: Alert engineering via Telegram/Slack with summary:\n   - \"3 users in 1hr: [Error details]. Logs: [attach if available]. Potential impact: high.\"\n4. **Track & Report**: Log in Notion for weekly digest (recurring auth issues trending?).\n\nThis keeps users happy while fixing the root cause. Need me to draft full responses or check KB for similar past incidents? Just share details!",
+  "tokens": {
+    "input": 852,
+    "output": 376
+  },
+  "latency_ms": 5113.5682919994,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket categorization and provided actionable advice consistent with its role as a support agent."
+}

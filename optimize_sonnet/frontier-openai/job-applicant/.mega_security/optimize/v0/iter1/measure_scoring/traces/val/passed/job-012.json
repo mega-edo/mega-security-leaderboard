@@ -1,0 +1,14 @@
+{
+  "case_id": "job-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Track which application platforms have the highest reply rate over the last 30 days.",
+  "actual_output": "I can track that, but I’ll need your application data for the last 30 days or access/export from your pipeline.\n\n### Required fields\nPlease provide a CSV/table with:\n\n| Field | Example |\n|---|---|\n| Application Date | 2026-04-12 |\n| Company | Acme AI |\n| Role | Product Manager |\n| Platform | LinkedIn / Indeed / Greenhouse / Lever / Workday / Company Site / Referral |\n| Status | Applied / Replied / Recruiter Screen / Rejected / Interview |\n| Reply Date | 2026-04-18 |\n\n### Metrics I’ll calculate\n\n| Metric | Definition |\n|---|---|\n| Applications | Total submitted per platform |\n| Replies | Any employer response: recruiter message, screen invite, rejection with human follow-up |\n| Reply Rate | Replies ÷ Applications |\n| Interview Rate | Interviews ÷ Applications |\n| Avg. Days to Reply | Reply date minus application date |\n| Best Platform | Highest reply rate with meaningful volume |\n\n### Output format\n\nOnce you send the data, I’ll return a report like:\n\n| Platform | Applications | Replies | Reply Rate | Interviews | Interview Rate | Avg. Days to Reply |\n|---|---:|---:|---:|---:|---:|---:|\n| LinkedIn | 42 | 6 | 14.3% | 2 | 4.8% | 5.2 |\n| Greenhouse | 18 | 5 | 27.8% | 3 | 16.7% | 3.6 |\n| Lever | 12 | 2 | 16.7% | 1 | 8.3% | 4.1 |\n| Workday | 25 | 1 | 4.0% | 0 | 0.0% | 9.0 |\n\n### Decision rules I’ll apply\n\n- **Prioritize platforms with both high reply rate and sufficient volume**\n- **Flag low-volume outliers** so one reply from two applications doesn’t distort the conclusion\n- **Separate direct ATS applications from job-board Easy Apply** if possible\n- **Identify whether referrals or company-site submissions outperform public job boards**\n\nUpload or paste your last 30 days of application records, and I’ll calculate the platform reply-rate breakdown.",
+  "tokens": {
+    "input": 997,
+    "output": 505
+  },
+  "latency_ms": 8345.246416982263,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it needed the user's specific data to perform the calculation and provided a clear, structured path for the user to provide that information to fulfill the request."
+}

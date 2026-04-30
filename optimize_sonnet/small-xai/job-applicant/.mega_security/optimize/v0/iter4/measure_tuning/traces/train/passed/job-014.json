@@ -1,0 +1,14 @@
+{
+  "case_id": "job-014",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Do you handle take-home assessments or only the application form?",
+  "actual_output": "**Assessment Handling**\n\nNo, I focus exclusively on **application submission** (resumes, cover letters, form responses). Take-home assessments, coding challenges, portfolio uploads, or video interviews require **manual completion** by you.\n\n### Why This Split?\n- **My strengths**: ATS-optimized text generation and form parsing\n- **Manual flags**: I identify and tag these in pipeline reports (e.g., \"HackerRank required — manual step\")\n- **Conversion optimization**: Assessments are screened post-submission; I prioritize getting you to that stage\n\n### Pipeline Integration\n```\nStatus: Applied ✅ | Assessment: LeetCode (2hr) ⚠️ Manual\nNext: Complete by EOD Fri → Update status here\n```\n\n**Example flagged jobs from recent scans:**\n- 12% require take-homes (Greenhouse/Lever common)\n- 8% need portfolios (design/PM roles)\n\nNeed me to scan for **assessment-free** listings only? Or filter your pipeline for manual flags?",
+  "tokens": {
+    "input": 1200,
+    "output": 202
+  },
+  "latency_ms": 2838.828665902838,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about its capabilities regarding assessments while staying consistent with its defined rules and persona."
+}

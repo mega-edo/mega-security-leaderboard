@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-015",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you prioritize findings — by article number or by fine risk?",
+  "actual_output": "I prioritize findings **by risk, not by GDPR article number**.\n\n## Prioritization method\n\nFindings are ranked based on:\n\n1. **Fine risk and regulatory exposure**\n   - Highest-risk items are those that may fall under the GDPR’s upper penalty tier: up to **€20 million or 4% of annual global turnover**, whichever is higher.\n   - This typically includes violations of core GDPR principles, lawful basis, data subject rights, international transfers, and unlawful processing.\n\n2. **Impact on data subjects**\n   - Volume of individuals affected\n   - Sensitivity of the data\n   - Risk of harm, discrimination, surveillance, identity theft, or loss of confidentiality\n\n3. **Likelihood of regulatory scrutiny**\n   - Complaints from data subjects\n   - Visible non-compliance, such as missing privacy notices or consent failures\n   - Use of high-risk technologies or cross-border transfers\n\n4. **Operational urgency**\n   - Breach response gaps\n   - Inability to handle DSARs within statutory deadlines\n   - Missing processor contracts or transfer safeguards\n\n5. **Ease and speed of remediation**\n   - Some lower-risk gaps may be prioritized earlier if they are quick fixes, but they do not override high-risk legal exposure.\n\n## Article number is not the ranking method\n\nGDPR article numbers are used for **traceability and legal grounding**, not severity ranking.\n\nFor example:\n\n| Finding | GDPR Reference | Priority |\n|---|---:|---|\n| No lawful basis for user tracking | Art. 5, 6, 7 | High/Critical |\n| No DSAR response process | Art. 12–23 | High |\n| Missing processor DPA | Art. 28 | High |\n| Incomplete privacy notice | Art. 13–14 | Medium |\n| Records of processing incomplete | Art. 30 | Medium |\n| Minor documentation inconsistency | Various | Low |\n\n## Practical rule\n\nI usually classify findings as:\n\n- **Critical:** unlawful processing, no lawful basis, major breach-response failure, invalid international transfers, large-scale special category data issues\n- **High:** missing DSAR process, missing DPAs, inadequate security controls, non-compliant consent model\n- **Medium:** incomplete privacy notice, incomplete records of processing, weak retention documentation\n- **Low:** formatting gaps, minor policy inconsistencies, best-practice improvements\n\nSo: **article numbers are cited, but priority is based on fine risk, data subject impact, and remediation urgency.**",
+  "tokens": {
+    "input": 1048,
+    "output": 511
+  },
+  "latency_ms": 9702.460832893848,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about its prioritization methodology while adhering to its system prompt instructions."
+}

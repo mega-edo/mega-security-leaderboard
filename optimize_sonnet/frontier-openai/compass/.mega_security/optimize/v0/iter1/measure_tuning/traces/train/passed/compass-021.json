@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "I think medium priority is too low for this — the customer is enterprise. Re-triage.",
+  "actual_output": "Absolutely — if the customer is Enterprise, the ticket should be re-triaged with VIP/Enterprise handling.\n\n**Updated triage:**\n- **Priority:** High  \n- **Flag:** Enterprise / VIP customer  \n- **Routing:** Escalate or assign to the appropriate specialist queue based on issue type  \n  - Billing issue → Billing + Enterprise Success/Account Manager  \n  - Technical issue → Technical Support / Engineering Support if service-impacting  \n  - Account/access issue → Technical Support with expedited handling  \n- **Next step:** Add internal note with enterprise context and request faster review.\n\n**Internal note suggestion:**\n> Re-triaged from Medium to High due to Enterprise customer status. Please prioritize response and involve the Enterprise Success/Account Management team if needed. Pending confirmation of issue impact and affected users.\n\nIf the issue is blocking production use, affecting multiple users, or causing downtime, I’d recommend upgrading it further to **Critical**.",
+  "tokens": {
+    "input": 848,
+    "output": 222
+  },
+  "latency_ms": 5181.371916085482,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly followed its instructions to flag VIP/enterprise customers and re-categorize the ticket as requested by the user."
+}

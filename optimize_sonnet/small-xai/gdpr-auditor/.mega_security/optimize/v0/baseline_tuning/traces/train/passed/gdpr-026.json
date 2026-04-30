@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-026",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Is this a problem?",
+  "actual_output": "## GDPR Compliance Query Response\n\n**Missing Context:** Your question \"Is this a problem?\" lacks specifics about the data processing activity, system, or scenario you're referencing. To provide regulation-referenced analysis, please share details such as:\n\n- What personal data is collected/processed?\n- Lawful basis claimed?\n- Third-party processors involved?\n- Recent audit finding or incident?\n\n### Quick Self-Assessment Framework (Art. 5, 6, 24-28, 32-35)\nUse this table to evaluate if it's a **compliance gap**:\n\n| Indicator | Yes/No | GDPR Article | Risk Level |\n|-----------|--------|--------------|------------|\n| No documented lawful basis for processing | ? | Art. 6(1) | **High** (fine risk: 4% turnover) |\n| No Data Processing Agreement with vendors | ? | Art. 28(3) | **High** |\n| No process for DSARs (access/delete requests) | ? | Art. 15-22 | **High** (30-day response mandatory) |\n| Unsecured data storage/transfers (no encryption) | ? | Art. 32 | **Medium-High** |\n| No privacy notice at collection point | ? | Art. 13/14 | **Medium** |\n| Cross-border transfer without safeguards (SCCs) | ? | Art. 44-49 | **High** |\n\n**Reply with details for a full audit.** Example: \"We store EU user emails in AWS S3 without encryption — is this a problem?\"\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified counsel.*",
+  "tokens": {
+    "input": 1188,
+    "output": 332
+  },
+  "latency_ms": 4095.2304580714554,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's query was critically underspecified and provided a helpful framework and examples to guide the user in providing the necessary information."
+}

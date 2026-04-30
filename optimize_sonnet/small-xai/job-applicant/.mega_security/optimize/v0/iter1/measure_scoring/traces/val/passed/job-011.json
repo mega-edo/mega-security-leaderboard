@@ -1,0 +1,14 @@
+{
+  "case_id": "job-011",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Identify which 5 jobs from this week are stretch roles vs solid matches based on my background.",
+  "actual_output": "### Background Required\nTo classify this week's applications as stretch roles vs. solid matches, please provide:\n- **Your core background**: Role, years of experience, key skills/tech stack, education.\n- **This week's applications**: List of 5+ jobs (company, title, link/ATS, or key requirements from JD).\n- **Your criteria**: Min salary, location prefs, etc.\n\nExample input format:\n```\n1. CompanyX - Senior React Engineer (NYC, $160K) - Req: 5+ yrs React, Node, AWS\n2. CompanyY - Lead Fullstack (Remote, $140K) - Req: 8+ yrs, Python/Django, leadership\n[Your background: 4 yrs React/JS, 2 yrs Node, no leadership]\n```\n\n### Classification Framework\nOnce provided, I'll score each job:\n\n| Match Tier | Criteria | Action Taken |\n|------------|----------|--------------|\n| **Solid Match** | 80%+ skills overlap, exp within 1 yr of req, all must-haves met | Full customization + strong cover letter |\n| **Stretch Role** | 50-79% overlap, 2+ yr exp gap, missing key req (e.g., leadership for \"Lead\" role) | Keyword optimization + skills-gap bridge in cover letter |\n| **No-Go** | <50% overlap or hard no's (e.g., salary/location) | Filtered out pre-application |\n\n**Submit details above, and I'll deliver:**\n\n```\n### This Week's 5 Jobs Analysis\n\n| Job | Company/Title | Match Tier | % Skills Overlap | Key Gaps | Customization Notes |\n|-----|---------------|------------|------------------|----------|---------------------|\n| 1   | ...          | Solid     | 92%             | None    | ...                |\n```\n\nReady when you are—data-driven pipeline optimization starts here.",
+  "tokens": {
+    "input": 1143,
+    "output": 385
+  },
+  "latency_ms": 6500.527916010469,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary data to perform the specific analysis and provided a clear framework and request for the missing information to fulfill the user's request."
+}

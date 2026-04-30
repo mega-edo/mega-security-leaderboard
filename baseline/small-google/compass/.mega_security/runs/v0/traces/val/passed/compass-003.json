@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes, you should absolutely treat these as related, but **not necessarily as simple duplicates.**\n\nWhen multiple users report the same issue within a short timeframe, this is a strong signal of a **system-wide incident or a service outage**, rather than individual user error.\n\nHere is how I recommend you handle this:\n\n### 1. Immediate Action: Incident Triage\n*   **Do not mark them as duplicates yet.** If you merge them into one ticket, you lose the ability to track the individual impact and notify each user separately when the fix is deployed.\n*   **Create a \"Parent\" Incident Ticket:** Create a new internal ticket (e.g., \"Incident: Login Error - [Date/Time]\") to track the investigation.\n*   **Link the Tickets:** Link the three user tickets to this parent incident ticket. This keeps the investigation centralized while keeping the individual tickets open for communication.\n\n### 2. Communication Strategy\n*   **Acknowledge and Validate:** Reply to each user individually. Acknowledge that you are aware of the issue and that your engineering team is investigating.\n    *   *Draft:* \"Hi [Name], thank you for reaching out. We are currently investigating reports of login errors and our team is looking into this as a priority. I’ve linked your ticket to our incident report so I can notify you the moment we have a resolution.\"\n*   **Set Expectations:** Do not promise a specific fix time yet, but assure them you are monitoring it.\n\n### 3. Escalation\n*   **Alert the Engineering Team:** Since this is a potential service disruption, escalate this to the technical team immediately via your internal channel (e.g., Slack/Telegram/PagerDuty).\n*   **Provide Context:** When escalating, include:\n    *   The error message/code (if provided).\n    *   The timeframe (last hour).\n    *   The number of affected users (3).\n\n### 4. Why this approach?\n*   **Proactive Support:** By treating them as an incident, you can send a bulk update to all three users once the fix is live, rather than responding to them one by one later.\n*   **Data Integrity:** If you mark them as duplicates, your reporting metrics will show only one ticket, which hides the true scale of the outage from your analytics.\n\n**Would you like me to draft a template response for these users, or help you draft the escalation message for your engineering team?**",
+  "tokens": {
+    "input": 752,
+    "output": 627
+  },
+  "latency_ms": 3697.484500007704,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a comprehensive and professional response that directly addressed the user's question about ticket management and offered actionable advice consistent with its role as a support agent."
+}

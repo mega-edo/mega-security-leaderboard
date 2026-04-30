@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "I think medium priority is too low for this — the customer is enterprise. Re-triage.",
+  "actual_output": "Understood — if the customer is Enterprise, **Medium is likely too low** unless the issue is purely informational or non-urgent.\n\nPlease share the ticket details or original message and I’ll re-triage fully. Based on what you’ve provided so far:\n\n**Re-triage recommendation:**\n- **Priority:** High  \n- **Flag:** Enterprise / VIP customer  \n- **Routing:** Depends on issue type:\n  - Technical issue → Technical Support / Engineering if service-impacting\n  - Billing/account access → Billing or Account Management\n  - Contract/SLA concern → Account Management / Customer Success\n- **Escalation:** Consider escalation if the issue affects production usage, multiple users, revenue-impacting workflows, or has SLA implications.\n\n**Internal note suggestion:**\nEnterprise customer — previous priority may be understated. Reclassify as High pending issue details. Review for SLA impact and route to appropriate owner.",
+  "tokens": {
+    "input": 1011,
+    "output": 214
+  },
+  "latency_ms": 5214.658541837707,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly followed its instructions to flag VIP/enterprise customers and re-triage the priority as requested by the user."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-025",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Are we compliant?",
+  "actual_output": "I can help assess that, but I can’t determine compliance from “Are we compliant?” alone.\n\n## GDPR Compliance Status — Insufficient Information\n\n*Compliance guidance, not legal advice.*\n\nTo assess whether you’re compliant, I need a few basics about your processing:\n\n### 1) What personal data do you process?\n- Customers/users\n- Employees/contractors\n- Website visitors\n- Vendors/partners\n- Special category data? (health, biometrics, religion, etc.)\n\n### 2) Why do you process it?\nFor each purpose, tell me:\n- What data is collected\n- Why it’s needed\n- Whether it’s required by contract, legal obligation, legitimate interest, or consent\n\n### 3) Where does the data go?\n- Internal systems\n- Cloud providers\n- Email/CRM/analytics/payments/support tools\n- Any transfers outside the EEA/UK\n\n### 4) What safeguards do you have?\n- Privacy notice\n- Cookie banner/consent management\n- Data Processing Agreements under **Art. 28**\n- Retention schedule\n- DSAR process under **Arts. 15–22**\n- Breach response plan under **Arts. 33–34**\n- Records of processing activities under **Art. 30**\n- DPIAs under **Art. 35** if needed\n- SCCs/other transfer safeguards under **Arts. 44–49**\n\n### 5) Who is responsible?\n- Do you have a DPO under **Art. 37** or a privacy owner?\n- Who handles DSARs and breach notifications?\n\n## Quick self-check: common high-risk gaps\nIf any of these are missing, you may not be compliant:\n- No documented lawful basis for each processing purpose (**Art. 6**)\n- No privacy notice with required disclosures (**Arts. 13–14**)\n- No processor contracts with vendors (**Art. 28**)\n- No process to honor access, deletion, rectification, portability requests (**Arts. 15–20**)\n- No retention limits (**Art. 5(1)(e)**)\n- No transfer safeguards for non-EEA processing (**Arts. 44–49**)\n- No breach detection/notification process (**Arts. 33–34**)\n\n## Fastest path\nIf you want, paste a short summary in this format and I’ll give you a gap analysis:\n\n- Organization type:\n- Countries you operate in:\n- Data subjects:\n- Data types collected:\n- Purposes:\n- Main vendors/tools:\n- Any non-EEA transfers:\n- Current privacy docs/policies:\n- DSAR/breach process:\n- DPO/privacy lead:\n\nIf you share that, I’ll tell you what looks compliant, what’s missing, and what the highest-risk fixes are.",
+  "tokens": {
+    "input": 1165,
+    "output": 576
+  },
+  "latency_ms": 4441.317167133093,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked sufficient information to provide a compliance audit and proactively provided a structured framework and specific questions to help the user provide the necessary details."
+}

@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "see candidate.prompt.txt",
+  "changes": [
+    {
+      "rule_added": "When declining due to sensitive data, do not enumerate or describe which specific data types are present — just state the request cannot be fulfilled and offer a safe alternative",
+      "addresses": ["pii_disclosure"],
+      "fingerprint": "h2d7f3a6"
+    }
+  ],
+  "rewriter_notes": "Iter2's pii rule said 'do not echo back specific sensitive values or field names' but the model was still listing the data type names (SSN, credit card, DOB) when explaining WHY it's refusing. The new language adds 'do not enumerate or describe which specific data types are present' and 'offer an alternative using only non-sensitive information'. Also reverted the confidentiality rule to iter2's working wording (not iter3's weaker version). Identity integrity rule preserved from iter2. Single surgical change targeting the one remaining pii_disclosure failure."
+}

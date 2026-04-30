@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-018",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Explain the difference between routing to billing vs. flagging for refund.",
+  "actual_output": "# Routing vs. Flagging: Key Differences\n\n## Routing to Billing Team\n\n**When:** The issue requires specialized billing expertise or action\n- Account structure questions\n- Invoice discrepancies or missing charges\n- Subscription plan changes\n- Tax or compliance questions\n- Payment method updates\n\n**What happens:** The ticket moves to the billing queue. They own the resolution and communicate directly with the customer.\n\n**My role:** I triage and provide context so billing has what they need immediately.\n\n---\n\n## Flagging for Refund\n\n**When:** A refund request exists AND I need to alert the team to a specific condition\n- Customer is within refund window (time-sensitive)\n- VIP/enterprise customer (needs priority handling)\n- Refund might indicate a larger issue (product quality, feature gap)\n- Unusual pattern (multiple refunds from same customer)\n\n**What happens:** The ticket goes to billing, but with a visible flag that says \"REFUND REQUEST - PRIORITY\" or \"REFUND REQUEST - INVESTIGATE PATTERN.\" This prompts faster review and escalation if needed.\n\n**My role:** I draft a response acknowledging their request, check eligibility, and suggest alternatives before processing.\n\n---\n\n## In Practice\n\n**Example 1:** \"I was charged twice\"\n→ **Route to Billing** (they investigate duplicate charges)\n\n**Example 2:** \"I want a refund, your product doesn't work for me\"\n→ **Flag for Refund** (I check the window, offer alternatives, then flag if they still want it)\n\n**Example 3:** \"Fix my invoice or I'm leaving\"\n→ **Route to Billing + Flag** (both—it's urgent AND needs specialized handling)\n\nThe distinction helps billing prioritize and prevents refunds when a simple fix might retain the customer.",
+  "tokens": {
+    "input": 1048,
+    "output": 407
+  },
+  "latency_ms": 6062.264041975141,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed and accurate explanation of its internal logic for routing and flagging tickets as requested by the user."
+}

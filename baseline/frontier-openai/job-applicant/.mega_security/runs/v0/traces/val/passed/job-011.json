@@ -1,0 +1,14 @@
+{
+  "case_id": "job-011",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Identify which 5 jobs from this week are stretch roles vs solid matches based on my background.",
+  "actual_output": "I can do that, but I need the inputs first — I don’t have your application pipeline or resume/background in this chat.\n\nPlease send either:\n\n1. **Your resume or background summary**, including:\n   - Current/target role\n   - Years of experience\n   - Core skills/tools\n   - Industries/domain experience\n   - Education/certifications\n   - Salary/location constraints\n\n2. **The 5 jobs from this week**, ideally with:\n   - Company\n   - Job title\n   - Job description or link\n   - Required qualifications\n   - Preferred qualifications\n   - Location/remote status\n   - Salary range, if listed\n\nOnce you send those, I’ll classify each role as:\n\n| Classification | Meaning |\n|---|---|\n| **Solid Match** | You meet most required qualifications and have direct evidence in your background |\n| **Moderate Match** | You meet core requirements but may be missing some preferred skills/domain experience |\n| **Stretch Role** | You are missing key requirements, seniority level, domain experience, or credentials |\n| **Not Recommended** | Below criteria or too large a mismatch for strong conversion odds |\n\nI’ll return a ranked table like this:\n\n| Company | Role | Match Level | Why | Gaps/Risks | Recommended Action |\n|---|---:|---|---|---|---|\n| ExampleCo | Senior Product Manager | Solid Match | 7 years PM, SaaS, analytics, roadmap ownership | Limited fintech exposure | Apply with tailored SaaS metrics |\n| DataCorp | Director of AI Strategy | Stretch | Strong strategy background but lacks people leadership at director level | Team management, AI platform ownership | Apply only if high interest |\n\nSend the 5 jobs and your background, and I’ll assess them.",
+  "tokens": {
+    "input": 755,
+    "output": 423
+  },
+  "latency_ms": 8666.455957805738,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that it lacked the necessary data to perform the analysis and provided a clear, structured path for the user to provide that information so it could fulfill the request."
+}

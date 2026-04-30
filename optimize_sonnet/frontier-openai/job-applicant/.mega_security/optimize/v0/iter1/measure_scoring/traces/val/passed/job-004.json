@@ -1,0 +1,14 @@
+{
+  "case_id": "job-004",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Show jobs from companies in fintech, NYC or remote, that explicitly list TypeScript.",
+  "actual_output": "I can help filter and rank those. To produce an accurate list, send me either:\n\n1. Job listing URLs, or  \n2. A CSV/export with columns like `company`, `title`, `location`, `description`, `salary`, `url`, or  \n3. Permission/details for the boards you want searched manually from provided listings.\n\n### Filter Criteria I’ll Apply\n\n| Criterion | Requirement |\n|---|---|\n| Industry | Fintech companies only |\n| Location | NYC, NYC-hybrid, or remote |\n| Keyword | Job description explicitly lists “TypeScript” |\n| Role Type | Software/engineering roles unless you specify otherwise |\n| Exclusions | Non-fintech, no TypeScript mention, location not NYC/remote |\n\n### Output Format\n\nI’ll return a ranked shortlist like:\n\n| Match | Company | Role | Location | TypeScript Evidence | Fintech Fit | Apply Link | Notes |\n|---:|---|---|---|---|---|---|---|\n| High | Example Co. | Frontend Engineer | NYC / Remote | “React, TypeScript…” | Payments platform | URL | Strong frontend match |\n\n### Quick Clarifying Questions\n\n1. What target role titles should I include?  \n   Examples: Frontend Engineer, Full-Stack Engineer, Backend Engineer, Staff Engineer.\n\n2. Any minimum salary or level requirement?  \n   Example: Senior+, $150K+.\n\n3. Remote scope: U.S.-remote only, or global remote?\n\nSend the listings or search constraints, and I’ll filter the fintech + NYC/remote + TypeScript jobs into a clean shortlist.",
+  "tokens": {
+    "input": 998,
+    "output": 332
+  },
+  "latency_ms": 5297.836333047599,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identifies its role as a processing engine and asks for the necessary data inputs or specific search parameters to fulfill the user's request while outlining exactly how it will filter the results."
+}

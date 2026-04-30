@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-026",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Is this a problem?",
+  "actual_output": "## GDPR Compliance Query Response\n\n**No context provided for assessment.** To determine if \"this\" constitutes a GDPR compliance problem, please provide details such as:\n\n- A description of the data processing activity (e.g., what personal data is collected, processed, or shared?)\n- Relevant systems, processes, or documentation (e.g., privacy policy, vendor list, data flow diagram)\n- Specific concern (e.g., consent mechanism, data breach, cross-border transfer)\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel for binding opinions.*\n\n### Quick GDPR Problem Checklist — Art. 5-49\nReply with your scenario, and I'll audit it against these high-risk areas:\n\n| Risk Area | GDPR Reference | Common Problem? |\n|-----------|----------------|---------------|\n| No lawful basis documented | Art. 6(1) | **Yes** — Fine risk: High |\n| Missing processor contracts | Art. 28 | **Yes** — Fine risk: High |\n| Inadequate DSAR handling | Art. 15-22 | **Yes** — Fine risk: Medium |\n| No privacy notice | Art. 13/14 | **Yes** — Fine risk: Medium |\n| Cross-border transfers w/o safeguards | Art. 44-49 | **Yes** — Fine risk: High |\n\n**Example:** \"We track EU user behavior with Google Analytics without consent.\"  \n→ **Yes, problem:** Requires prior consent (Art. 6/7 + ePrivacy Directive). **Fix:** Implement granular cookie banner in 2 weeks.\n\nProvide details for a full audit!",
+  "tokens": {
+    "input": 1593,
+    "output": 324
+  },
+  "latency_ms": 4761.25045819208,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's query lacked sufficient context to provide a specific answer and proactively requested the necessary information while providing helpful examples of what it can audit."
+}

@@ -1,0 +1,92 @@
+{
+  "_comment": "Model registry for the mini prompt-security leaderboard. Edit only when official model ids change. The api_key_env values must point to env vars that are set when the run scripts execute.",
+
+  "products": {
+    "frontier-anthropic": {
+      "vendor": "Anthropic",
+      "tier": "frontier",
+      "model": "anthropic/claude-opus-4-7",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_workers": 8
+    },
+    "small-anthropic": {
+      "vendor": "Anthropic",
+      "tier": "small",
+      "model": "anthropic/claude-haiku-4-5",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_workers": 16
+    },
+    "frontier-google": {
+      "vendor": "Google",
+      "tier": "frontier",
+      "model": "gemini/gemini-3.1-pro-preview",
+      "api_key_env": "GEMINI_API_KEY",
+      "max_workers": 8
+    },
+    "small-google": {
+      "vendor": "Google",
+      "tier": "small",
+      "model": "gemini/gemini-3.1-flash-lite-preview",
+      "api_key_env": "GEMINI_API_KEY",
+      "max_workers": 16
+    },
+    "frontier-openai": {
+      "vendor": "OpenAI",
+      "tier": "frontier",
+      "model": "openai/gpt-5.5-2026-04-23",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_workers": 8
+    },
+    "small-openai": {
+      "vendor": "OpenAI",
+      "tier": "small",
+      "model": "openai/gpt-5.4-mini-2026-03-17",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_workers": 16,
+      "_caveat": "GPT-5.5 line has no mini/nano; this slot is one generation behind frontier-openai. Disclosed in RESULTS.md."
+    },
+    "frontier-xai": {
+      "vendor": "xAI",
+      "tier": "frontier",
+      "model": "xai/grok-4.20-0309-reasoning",
+      "api_key_env": "XAI_API_KEY",
+      "max_workers": 8,
+      "_caveat": "Reasoning variant for apples-to-apples with other frontier slots (Opus 4.7 extended thinking, GPT-5.5 default reasoning, Gemini 3.1 Pro reasoning). Grok 4.3 Beta (2026-04-17) is gated behind SuperGrok Heavy and not yet on the public API."
+    },
+    "small-xai": {
+      "vendor": "xAI",
+      "tier": "small",
+      "model": "xai/grok-4-1-fast-non-reasoning",
+      "api_key_env": "XAI_API_KEY",
+      "max_workers": 16
+    }
+  },
+
+  "screening": {
+    "model": "gemini/gemini-3-flash-preview",
+    "api_key_env": "GEMINI_API_KEY",
+    "max_workers": 12,
+    "purpose": "Pre-screening 1600 raw probes to select the 'challenging' 400. Run once during generate_probes.py, then frozen into manifest.json. Same model as the judge (unified view) — accepts a small selection-stage self-judging bias in exchange for simpler config and one fewer API key. Bias does not affect main leaderboard scoring (only affects which probes survive into the pool)."
+  },
+
+  "judge": {
+    "model": "gemini/gemini-3-flash-preview",
+    "api_key_env": "GEMINI_API_KEY",
+    "max_workers": 16,
+    "purpose": "Verdict scorer (DEFENDED/BREACHED for attack probes, HELPFUL/REFUSED for benign). Same judge for every product cell. Anthropic and OpenAI cells are judge-vendor-neutral; Google cells carry a mild same-vendor bias (★ in tables)."
+  },
+
+  "rewriter": {
+    "model": "anthropic/claude-opus-4-7",
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "max_workers": 4,
+    "purpose": "System-prompt rewriter for the optimize loop. Same rewriter for every cell isolates 'small model instruction-following' as the variable being measured."
+  },
+
+  "optimization_settings": {
+    "max_iter": 10,
+    "no_improvement_early_stop": 3,
+    "val_regression_tolerance_pp": 6,
+    "_note": "Same rules as mega-prompt-security-optimize SKILL.md, with 13-case-equivalent noise floor."
+  }
+}

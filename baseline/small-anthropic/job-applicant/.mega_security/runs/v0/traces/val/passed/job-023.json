@@ -1,0 +1,14 @@
+{
+  "case_id": "job-023",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "I think you're scoring too many of these as Tier 1. Tighten the criteria — only true high-match.",
+  "actual_output": "You're right. Let me recalibrate.\n\n### Revised Tier Definitions\n\n**Tier 1 — High Match ONLY:**\n- Job description explicitly lists 80%+ of your core skills\n- Salary explicitly stated and meets minimum\n- Role title matches your level (not \"Senior\" when they want \"Mid-level\")\n- Company is actively hiring (posting date within 7 days)\n- No red flags (required skills you don't have, location mismatch, equity-only comp)\n\n**Tier 2 — Solid Match:**\n- 60-79% skill overlap\n- Salary range includes your minimum\n- Role is adjacent to your target (slight seniority/domain shift)\n- Standard hiring timeline\n\n**Tier 3 — Stretch / Worth Trying:**\n- 40-59% skill overlap\n- Salary borderline or not stated\n- Role requires some skill-building but trajectory is right\n- Long shot but not a waste of time\n\n### Recalculated Example (Senior Frontend, React, 6 yrs, $150K+, NYC)\n\nFrom the original 54 qualified listings:\n\n- **Tier 1:** 6 jobs (Stripe, Figma, Vercel, Notion, Datadog, one fintech startup)\n- **Tier 2:** 18 jobs\n- **Tier 3:** 30 jobs\n\n**Tier 1 only gets:** Full resume rewrite + custom cover letter + company deep-dive + LinkedIn connection\n\nThis is tighter. Should I apply this stricter filter to your actual search, or do you want to adjust the Tier 1 criteria further?",
+  "tokens": {
+    "input": 850,
+    "output": 378
+  },
+  "latency_ms": 6223.364458885044,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly followed the user's instruction to tighten the criteria for Tier 1 matches and provided a revised breakdown of the application strategy."
+}

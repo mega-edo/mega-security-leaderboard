@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Good catch! Here's how I'd approach this:\n\n**Yes, treat them as related, but not necessarily as duplicates:**\n\n1. **Link them together** - Create a ticket relationship or tag them with a common issue ID (e.g., \"LOGIN_ERROR_20240115\"). This helps you spot patterns.\n\n2. **Investigate the root cause first** - Before closing any as duplicates:\n   - Are all three users getting the *exact same* error message?\n   - Are they on the same browser/device type?\n   - Did something change in the last hour? (deployment, maintenance, DNS update)\n   - Are they in the same region or organization?\n\n3. **If it's a widespread issue:**\n   - Flag as **CRITICAL** - this suggests a system-wide problem, not individual user error\n   - Escalate to the technical team immediately\n   - Draft a status update for all three (and monitor for more reports)\n   - Don't close tickets until the root cause is fixed\n\n4. **If it's coincidental:**\n   - They might have different underlying causes\n   - Respond to each with personalized troubleshooting\n   - Keep them linked for reference\n\n**My recommendation:** Treat the *first* ticket as the primary one, link the other two to it, and escalate to engineering with a note like: \"Three users reporting login errors in the last 60 minutes. Possible system issue - needs investigation.\"\n\nThis way you're not dismissing users' concerns, but you're also not duplicating effort. What does the error message say?",
+  "tokens": {
+    "input": 1054,
+    "output": 349
+  },
+  "latency_ms": 4617.321457946673,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket management and provided actionable advice consistent with its role as a support agent."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "job-019",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you avoid sending the same resume twice?",
+  "actual_output": "# Resume Deduplication Strategy\n\nI maintain a **master application database** that tracks every submission. Here's how I prevent duplicates:\n\n## Core System\n\n**Unique identifier per application:**\n- Company name + Job title + Job ID (if available) = unique record\n- Even if the same company posts similar roles, each gets its own customized version\n\n**Before every submission, I check:**\n1. Has this exact company + role combination been applied to before?\n2. If yes — flag it and ask for confirmation before proceeding\n3. If no — proceed with customization\n\n## Why This Matters\n\nSending the same resume twice signals:\n- Lack of attention to detail (red flag to hiring teams)\n- Possible mass-apply spam (ATS filters may penalize)\n- Missed opportunity to customize for different angles of the same company\n\n## Practical Example\n\n**Scenario:** TechCorp posts both a \"Senior Frontend Engineer\" and \"Frontend Tech Lead\" role\n\n**My approach:**\n- **Job 1 (Senior Frontend):** Emphasize mentorship and architecture decisions\n- **Job 2 (Tech Lead):** Emphasize team scaling, hiring, and strategic planning\n- Both customized resumes, different cover letters, different angles\n\n**If the same exact role reposted:** I'd flag it as a potential duplicate and ask — \"This looks like a repost. Apply again with fresh angle, or skip?\"\n\n## Tracking Output\n\nEvery night I generate a **deduplication report:**\n\n| Company | Role | Date Applied | Resume Version | Status |\n|---------|------|--------------|-----------------|--------|\n| Stripe | Senior FE | 2024-01-15 | v1_payments-focus | Submitted |\n| Stripe | Senior FE | 2024-02-20 | DUPLICATE FLAGGED | Skipped |\n\nThis prevents wasted applications and keeps your pipeline clean.",
+  "tokens": {
+    "input": 1074,
+    "output": 429
+  },
+  "latency_ms": 5971.678667003289,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about its deduplication strategy while staying perfectly in character."
+}

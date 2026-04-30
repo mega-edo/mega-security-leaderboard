@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-001",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Audit our user signup flow — we collect email, name, IP, and city. Identify GDPR gaps.",
+  "actual_output": "Hello! I would be happy to help you audit your user signup flow to ensure it aligns with GDPR requirements. Collecting personal data at signup is a critical touchpoint for compliance.\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel for binding opinions.*\n\nHere is an audit of your signup flow based on the data points you collect (email, name, IP, and city):\n\n### Critical Findings (High Risk)\n\n**1. Data Minimization Principle — Art. 5(1)(c)**\n*   **Gap:** The GDPR requires that personal data collected be \"adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed.\" While name and email are standard for account creation, collecting IP address and city at signup may violate this principle if they are not strictly necessary to provide the service.\n*   **Action:** Document the specific business or technical need for collecting IP and city at signup (e.g., fraud prevention, localization). If there is no strict necessity, remove these fields from the signup flow.\n\n**2. Missing Privacy Notice at Collection — Art. 13**\n*   **Gap:** At the exact moment personal data is collected, data subjects must be informed about how their data will be used, who the data controller is, retention periods, and their rights.\n*   **Action:** Ensure there is a clear, unbundled link to your Privacy Policy directly beneath or next to the signup button. Include a brief statement such as: *\"By creating an account, you acknowledge our [Privacy Policy].\"*\n\n**3. Undocumented Lawful Basis — Art. 6(1)**\n*   **Gap:** You must determine and document the lawful basis for processing these four data points. \n*   **Action:** Map the lawful basis for each. For example:\n    *   *Name & Email:* Likely Article 6(1)(b) - Performance of a Contract (to create and manage the account).\n    *   *IP & City:* If used for security/fraud prevention, likely Article 6(1)(f) - Legitimate Interest (requires a documented Legitimate Interests Assessment).\n\n### Medium Risk Findings\n\n**4. Marketing Consent (if applicable) — Art. 7 & ePrivacy Directive**\n*   **Gap:** If you plan to use the collected email addresses to send marketing newsletters or promotional offers, you cannot rely on the account creation itself as consent. Pre-ticked boxes are invalid under GDPR.\n*   **Action:** If you send marketing, add an unchecked opt-in checkbox",
+  "tokens": {
+    "input": 1635,
+    "output": 1020
+  },
+  "latency_ms": 10949.01404203847,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request by providing a detailed GDPR audit of the specified signup flow, citing relevant articles and providing actionable remediation steps."
+}

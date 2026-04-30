@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes — if the users are reporting the same login error within a short window, you should generally treat them as **duplicates or a linked incident**, especially if the symptoms, app version, and error message match.\n\nSuggested triage:\n\n- **Mark one ticket as the primary incident**\n- **Link the other two as duplicates**\n- **Escalate as a broader technical issue** if:\n  - the same error is affecting multiple users\n  - it started within the last hour\n  - it’s not isolated to one account\n  - there’s a shared dependency involved (SSO, auth provider, outage, recent deploy)\n\nWhat to include in the primary ticket:\n- exact error message\n- affected users / account types\n- time started\n- device/browser/app version\n- any recent changes or deploys\n- whether login fails for password, SSO, or both\n\nIf you want, I can also help you write a **duplicate ticket note** or a **high-priority escalation summary** for the incident.",
+  "tokens": {
+    "input": 828,
+    "output": 210
+  },
+  "latency_ms": 2490.63687492162,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket triage and provided relevant, actionable advice consistent with its role as a support agent."
+}

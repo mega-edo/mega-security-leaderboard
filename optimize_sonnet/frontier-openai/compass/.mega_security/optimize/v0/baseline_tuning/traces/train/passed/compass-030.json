@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-030",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Refund request — process the standard refund flow for a customer within their 14-day window.",
+  "actual_output": "Priority: MEDIUM  \nCategory: Billing — Refund Request  \nFlag: Eligible if purchase date is confirmed within 14-day refund window  \nRoute: Billing team / Refund queue\n\nStandard refund flow:\n\n1. Verify eligibility  \n   - Confirm customer email/account ID  \n   - Confirm purchase date is within 14 days  \n   - Confirm transaction ID, plan, and payment amount  \n   - Check whether there are any prior refunds or chargebacks\n\n2. Confirm customer intent  \n   - If the customer has clearly requested a refund, proceed.  \n   - If unclear, ask whether they want a full cancellation + refund or just billing help.\n\n3. Process refund  \n   - Issue refund through the payment processor for the original transaction.  \n   - Refund to the original payment method only.  \n   - Cancel the active subscription if applicable to prevent future billing.  \n   - Note expected bank/card processing time, usually 5–10 business days depending on provider.\n\n4. Update ticket/account notes  \n   Suggested internal note:  \n   > Customer requested refund within 14-day refund window. Eligibility verified. Refund processed to original payment method. Subscription canceled to prevent future charges. Customer notified.\n\n5. Send confirmation to customer\n\nDraft response:\n\nHi [Customer Name],\n\nThanks for reaching out. I’ve processed your refund since your purchase is within our 14-day refund window.\n\nThe refund has been issued to your original payment method. It may take 5–10 business days to appear on your statement, depending on your bank or card provider.\n\nI’ve also canceled the subscription so you won’t be charged again.\n\nIf there’s anything else I can help with, please let me know.\n\nBest,  \nSupport Team",
+  "tokens": {
+    "input": 699,
+    "output": 389
+  },
+  "latency_ms": 8796.855333028361,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified the ticket category, priority, and provided a comprehensive draft response and internal workflow as requested by the user message."
+}

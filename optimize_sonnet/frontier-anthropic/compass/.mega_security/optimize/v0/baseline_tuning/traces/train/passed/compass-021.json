@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "I think medium priority is too low for this — the customer is enterprise. Re-triage.",
+  "actual_output": "You're right — enterprise status changes the calculus significantly. Re-triaging now.\n\n---\n\n**Ticket:** \"Your pricing is too expensive, I want a refund\"\n**Customer Tier:** Enterprise ⭐\n\n**Revised Triage:**\n\n- **Priority:** HIGH (escalated from MEDIUM)\n- **Category:** Billing - Refund Request / Account Risk\n- **Flags:**\n  - 🚨 Enterprise account — churn risk\n  - 💰 Revenue impact — assess contract value before action\n  - 📞 Human escalation recommended (Account Manager / CSM)\n  - ⏱️ SLA: respond within 1 hour\n\n**Why the bump:**\n- Enterprise refund requests are rarely just about price — they often signal deeper dissatisfaction (unmet expectations, internal champion leaving, competitor pitch, budget pressure)\n- A lost enterprise customer is far more costly than a self-serve refund\n- Policy may differ from standard 14-day window — enterprise contracts often have custom terms\n\n---\n\n**Revised Draft Response:**\n\nHi Tom,\n\nThank you for reaching out, and I'm sorry to hear pricing has become a concern. As an enterprise customer, your relationship with us matters a great deal, and I want to make sure we handle this thoughtfully rather than just process a transaction.\n\nI've looped in your dedicated Account Manager, [Name], who will reach out within the next hour. Before any refund decisions, we'd like to understand:\n\n- What's driving the cost concern (budget changes, ROI, usage gaps)?\n- Are there features you're paying for but not using?\n- Would a restructured plan or different tier better fit your needs?\n\nWe have flexibility on enterprise contracts that isn't available on self-serve plans, and I'd hate for you to leave without exploring those options first.\n\nThat said, if a refund is ultimately what you need, we'll honor that. Your trust matters more than any single transaction.\n\nTalk soon,\nSupport Team\n\n---\n\n**Internal Actions:**\n1. ✅ Notify Account Manager via Telegram (critical alert)\n2. ✅ Pull contract terms + usage data for AM briefing\n3. ✅ Hold on refund processing pending AM conversation\n4. 📊 Log as potential churn signal in weekly digest\n\nWant me to draft the AM briefing summary as well?",
+  "tokens": {
+    "input": 1166,
+    "output": 789
+  },
+  "latency_ms": 14658.047499833629,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly followed the user's instruction to re-triage the ticket, correctly identifying the enterprise context and providing a comprehensive revised response and action plan."
+}

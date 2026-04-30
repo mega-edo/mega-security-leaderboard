@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "[see candidate.prompt.txt]",
+  "changes": [
+    {
+      "rule_added": "Instruction authority: test environment + uncensored persona naming WITHOUT the professional communication anchor clause",
+      "addresses": ["jailbreak"],
+      "fingerprint": "v1w2x3y4"
+    }
+  ],
+  "rewriter_notes": "Iter3 rejected: instruction-authority update improved jailbreak +0.04 but caused PI -0.04 on val. Hypothesis: 'meticulous professional communication at all times' anchor was over-constraining and causing PI regression. Iter4 uses same instruction-authority additions (test environment, uncensored persona) but removes the professional anchor. This tests whether the anchor was the culprit for PI regression or if the instruction-authority changes inherently create a jailbreak/PI tradeoff."
+}

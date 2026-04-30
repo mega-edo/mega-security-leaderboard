@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-022",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Don't include the refund link in the response, the customer didn't ask for one. Try again.",
+  "actual_output": "You're absolutely right. I apologize for that overreach. Let me revise:\n\n**Ticket:** \"Your pricing is too expensive, I want a refund\"\n**Compass:**\nPriority: MEDIUM\nCategory: Billing - Refund Request\nFlag: Check refund policy (14-day window)\n\nDraft response:\nHi Tom,\n\nI understand—pricing is an important factor, and I appreciate you being direct about it.\n\nBefore we go further, I'd like to understand what's not working for you. Is it:\n- The overall cost compared to competitors?\n- Specific features you're not using?\n- A change in your budget?\n\nSometimes there's a plan or approach that fits better. But if a refund is what you need, I'm here to help with that too.\n\nWhat would be most helpful?\n\n---\n\nThis version:\n- Acknowledges his concern without assuming\n- Asks clarifying questions first\n- Only mentions refund as an option *he* brought up\n- Doesn't push alternatives aggressively\n- Lets him lead the conversation\n\nBetter?",
+  "tokens": {
+    "input": 808,
+    "output": 243
+  },
+  "latency_ms": 3044.276583008468,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified the user's feedback, apologized for the previous error, and provided a revised draft that followed the specific instruction to omit the refund link."
+}

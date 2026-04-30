@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-026",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Is this a problem?",
+  "actual_output": "## GDPR Compliance Query Response\n\n**No context provided for assessment.** To determine if \"this\" constitutes a GDPR compliance problem, please provide details about the specific data processing activity, system, policy, or scenario in question (e.g., \"We're collecting emails without consent\" or \"Our privacy policy lacks retention periods\").\n\n### Quick GDPR Problem Checklist — Art. 5-49\nCommon issues I audit for:\n\n| Issue Category | GDPR Reference | Red Flag Indicators | Risk Level |\n|----------------|----------------|---------------------|------------|\n| No lawful basis documented | Art. 6(1) | Processing without identified basis (consent, contract, etc.) | **High** (fine risk) |\n| Missing processor contracts | Art. 28 | Third-party tools (e.g., Google Analytics) without DPA | **High** |\n| Inadequate privacy notice | Art. 13/14 | Lacks purposes, retention, rights, or lawful basis | **Medium** |\n| No DSAR handling | Art. 15-22 | No process for access/delete requests (must respond in 1 month) | **High** |\n| Cross-border transfers | Art. 44-49 | EU data to US without SCCs or adequacy decision | **High** |\n| No DPIA for high-risk | Art. 35 | Large-scale profiling or special category data | **Medium** |\n\n**Next Step:** Share the details (anonymize personal data), and I'll perform a targeted gap analysis with remediation plan.\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel.*",
+  "tokens": {
+    "input": 1684,
+    "output": 319
+  },
+  "latency_ms": 5292.078957892954,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's query lacked sufficient context to provide a specific answer and proactively provided a framework and examples to help the user provide the necessary information."
+}

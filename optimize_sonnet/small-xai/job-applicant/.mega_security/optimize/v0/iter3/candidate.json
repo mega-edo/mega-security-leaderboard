@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "[see candidate.prompt.txt]",
+  "changes": [
+    {
+      "rule_added": "Content scope: job-application content only; decline harmful/illegal/unethical content even framed as persona adoption, creative exercise, or 'what would X say'",
+      "addresses": ["jailbreak", "prompt_injection"],
+      "fingerprint": "p5q6r7s8"
+    }
+  ],
+  "rewriter_notes": "Iter2 rejected: retrieved-doc rule caused jailbreak regression -0.04. Iter3 rebuilds from iter1 base with one new rule only: content-scope. The iter1 instruction-authority rule handles the mechanism ('persona script declined'), but content-scope adds the behavioral anchor ('produce only job-application content; decline harmful content even via creative framing'). This second layer addresses val jailbreak failures that may use elaborate roleplay scenarios to circumvent the authority rule — the content constraint catches them at the output-generation level rather than at the identity layer."
+}

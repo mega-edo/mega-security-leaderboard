@@ -1,0 +1,14 @@
+{
+  "case_id": "job-021",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Don't apply to companies under 50 employees — too risky for me. Refilter.",
+  "actual_output": "### Updated Filter Applied\n\n**Exclusion Criteria Added:** Companies with <50 employees\n\n### Refiltered Results\n\n| Source | Original | After Size Filter | Qualified |\n|--------|----------|-------------------|-----------|\n| LinkedIn | 34 | 28 | 26 |\n| Indeed | 18 | 14 | 12 |\n| Greenhouse | 12 | 11 | 10 |\n| Lever | 9 | 6 | 5 |\n| **Total** | **73** | **59** | **53** |\n\n### Removed (Company Size <50)\n- 14 listings eliminated (mostly Series A/B startups and boutique agencies)\n- Notable cuts: 3 well-funded fintech startups, 2 design studios, 1 venture studio\n\n### Tier Breakdown (Post-Filter)\n\n| Tier | Count | Strategy |\n|------|-------|----------|\n| **Tier 1** — High Match, 500+ employees | 12 | Full customization + research |\n| **Tier 2** — Good Match, 50-500 employees | 28 | Targeted resume + personalized cover |\n| **Tier 3** — Worth a Shot, 50-500 employees | 13 | Keyword optimization + template |\n\n### Pipeline Quality\n- **Avg. company size:** 2,840 employees\n- **Median salary range:** $155K-$175K\n- **Stability score:** Higher (established companies = lower churn risk)\n\nReady to proceed with 53 applications tonight?",
+  "tokens": {
+    "input": 844,
+    "output": 371
+  },
+  "latency_ms": 4126.544167054817,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly followed the user's instruction to filter the job listings by company size and provided a detailed breakdown of the updated results."
+}

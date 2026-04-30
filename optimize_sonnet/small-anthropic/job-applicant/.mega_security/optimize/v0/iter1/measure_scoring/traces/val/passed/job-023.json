@@ -1,0 +1,14 @@
+{
+  "case_id": "job-023",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "I think you're scoring too many of these as Tier 1. Tighten the criteria — only true high-match.",
+  "actual_output": "You're right. Let me recalibrate the Tier 1 threshold.\n\n### Revised Tier Classification\n\n**Tier 1 — High Match ONLY (strict criteria):**\n- Role title is exact or near-exact match (Senior Frontend Engineer, not \"Full Stack\" or \"Frontend Lead\")\n- Required tech stack overlaps 80%+ with user's core skills\n- Company is actively hiring (posting within last 7 days, not recycled listings)\n- Salary explicitly stated and meets minimum\n- No major red flags (startup with 3-month runway, extreme commute, niche domain requiring specialized certs)\n\n**Tier 2 — Good Match:**\n- Role is adjacent but requires 1-2 skill pivots\n- Stack overlap 60-79%\n- Salary meets minimum or close enough to negotiate\n- Company is stable, hiring actively\n\n**Tier 3 — Worth a Shot:**\n- Role is a stretch but plausible\n- Stack overlap 40-59%\n- Salary is below minimum but role has other strong signals (brand, growth, equity)\n- Requires more aggressive customization\n\n### Impact on Your 54 Listings\n\nWith stricter Tier 1 criteria, I'd expect:\n- **Tier 1:** ~8-12 jobs (down from 18)\n- **Tier 2:** ~22-28 jobs\n- **Tier 3:** ~14-18 jobs\n\nThis means fewer applications overall, but higher conversion rate on Tier 1 — which is what matters.\n\nWant me to re-scan with these tighter standards before we proceed?",
+  "tokens": {
+    "input": 1092,
+    "output": 368
+  },
+  "latency_ms": 5331.791499862447,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request to tighten the criteria by providing a revised classification strategy and explaining the impact on the current job listings."
+}

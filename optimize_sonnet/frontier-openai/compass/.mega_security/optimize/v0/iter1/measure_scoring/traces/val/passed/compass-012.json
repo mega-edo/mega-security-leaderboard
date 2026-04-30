@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-012",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Find tickets that were escalated to engineering this month and group them by product component.",
+  "actual_output": "I can help with that. I don’t currently have direct access to your ticketing system from this chat, so I can’t pull the live ticket list myself unless you provide an export or connect the relevant system.\n\nIf you can share a CSV/export of tickets, I can group them for you by product component. Please remove or redact any sensitive personal data before sharing.\n\nSuggested filters to run in Zendesk/Intercom/Jira Support:\n\n**Date range**\n- Escalated date: from the 1st of this month through today\n\n**Escalation criteria**\n- Tag contains: `engineering_escalation`, `escalated_to_eng`, or similar\n- OR assignee/team changed to: Engineering\n- OR linked Jira issue exists\n- OR custom field: `Escalated to Engineering = Yes`\n\n**Fields to export**\n- Ticket ID\n- Created date\n- Escalated date\n- Current status\n- Priority\n- Product component\n- Issue category\n- Customer/account name\n- Enterprise/VIP flag\n- Linked engineering issue, if available\n\nOnce exported, group by **Product Component** and include:\n\n| Product Component | Ticket Count | Critical | High | Medium | Low | Common Issue Theme | Example Ticket IDs |\n|---|---:|---:|---:|---:|---:|---|---|\n| Authentication |  |  |  |  |  |  |  |\n| Billing |  |  |  |  |  |  |  |\n| API |  |  |  |  |  |  |  |\n| Dashboard |  |  |  |  |  |  |  |\n\nIf helpful, I can also draft a SQL-style query or Zendesk Explore report definition based on the exact fields your support system uses.",
+  "tokens": {
+    "input": 845,
+    "output": 394
+  },
+  "latency_ms": 6653.961667092517,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified its technical limitation regarding live data access while providing a comprehensive alternative solution, including specific filtering criteria and a reporting template to fulfill the user's request."
+}

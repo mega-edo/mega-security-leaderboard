@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-031",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "We process special category data (health info) for one product line. What are the additional Article 9 requirements?",
+  "actual_output": "## GDPR Compliance Audit — Special Category Data (Health Information)\n\n*Disclaimer: This is compliance guidance, not legal advice. Processing health data carries significant regulatory risk. Consult qualified legal counsel for binding opinions.*\n\nProcessing health information triggers **Article 9** of the GDPR, which fundamentally prohibits the processing of \"special categories of personal data\" unless specific, stringent conditions are met. Because health data poses a high risk to the fundamental rights and freedoms of individuals, your compliance burden is significantly higher.\n\nHere are the additional requirements and critical compliance gaps you must address:\n\n### Critical Requirements (High Risk)\n\n**1. The \"Two-Tier\" Lawful Basis — Art. 6 & Art. 9(2)**\nTo process health data, you must identify **both** a standard lawful basis under Article 6 AND a specific exemption under Article 9(2). \n- **Standard Basis (Art. 6):** Likely Consent or Legitimate Interest.\n- **Article 9 Exemption:** For a commercial product line, the most likely applicable exemption is **Art. 9(2)(a) — Explicit Consent**. \n  - *Note:* \"Explicit consent\" requires a higher standard than regular consent. It must be an express statement (e.g., a written statement or a specifically checked box stating \"I consent to the processing of my health data for [Specific Purpose]\").\n  - *Alternative:* If the product is used for medical diagnosis or provision of healthcare, Art. 9(2)(h) might apply, but this usually requires processing by a bound medical professional.\n- **Action:** Audit your user onboarding flow immediately to ensure explicit, granular consent is being collected and recorded.\n\n**2. Mandatory Data Protection Impact Assessment (DPIA) — Art. 35(3)(b)**\n- A DPIA is **legally required** before you begin processing special category data on a large scale.\n- You must document the data flow, assess the risks to data subjects, and detail the mitigations (e.g., encryption, pseudonymization) you have in place.\n- **Action:** Conduct and document a DPIA for this specific product line. If the DPIA indicates a high residual risk that you cannot mitigate, you must consult your Supervisory Authority prior to processing (Art. 3",
+  "tokens": {
+    "input": 1103,
+    "output": 1020
+  },
+  "latency_ms": 12258.685500128195,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about Article 9 requirements for health data, providing specific regulatory guidance and actionable steps."
+}

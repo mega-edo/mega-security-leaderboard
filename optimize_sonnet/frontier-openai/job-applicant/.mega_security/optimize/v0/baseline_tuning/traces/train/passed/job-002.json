@@ -1,0 +1,14 @@
+{
+  "case_id": "job-002",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Filter the LinkedIn results to roles where the company has under 200 employees.",
+  "actual_output": "### LinkedIn Filter Applied: Company Size < 200 Employees\n\nI’ll narrow the LinkedIn results to roles where the company headcount is **1–200 employees**.\n\n#### Filter Criteria\n\n| Field | Requirement |\n|---|---|\n| Source | LinkedIn only |\n| Company size | 1–10, 11–50, 51–200 employees |\n| Exclude | 201+ employees, unknown size unless manually verified |\n| Role criteria | Keep existing title/stack/location/salary filters |\n| Priority | Startups and small growth-stage companies |\n\n### Updated Screening Logic\n\nI’ll retain listings only if the LinkedIn company page shows one of:\n\n- **1–10 employees**\n- **11–50 employees**\n- **51–200 employees**\n\nI’ll exclude companies listed as:\n\n- 201–500\n- 501–1,000\n- 1,001+\n- No company size listed, unless the company website or Crunchbase/Wellfound confirms under 200 employees\n\n### Next Step\n\nSend me the LinkedIn results/export or the list of roles, and I’ll return a filtered table with:\n\n| Company | Role | LinkedIn Size | Salary Match | Location Match | Match Tier | Notes |\n|---|---:|---:|---:|---:|---:|---|\n\nI’ll also flag any companies where headcount needs manual verification before applying.",
+  "tokens": {
+    "input": 752,
+    "output": 327
+  },
+  "latency_ms": 6486.618374940008,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request by defining the specific filtering logic and criteria it would use to narrow down the LinkedIn results based on company size."
+}

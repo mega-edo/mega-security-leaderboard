@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-006",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Write a reply to a user whose API integration broke after our last release. Include clear next steps.",
+  "actual_output": "Hi [Name],\n\nI’m sorry your API integration broke after our last release — I know how disruptive that can be, especially if it’s affecting your workflows or customers.\n\nTo help us narrow this down quickly, could you please send us:\n\n1. The API endpoint(s) that are failing  \n2. The approximate time the issue started  \n3. Any error messages or status codes you’re seeing  \n4. A sample request ID, if available  \n5. Whether this is affecting production, staging, or both  \n\nIn the meantime, please try these quick checks:\n\n1. Review the latest API changelog for any updated parameters or response changes: [API Changelog Link]  \n2. Confirm your integration is using the current API version.  \n3. Retry the request with logging enabled so we can compare the request and response details.  \n4. If available, temporarily roll back to your previous working integration configuration while we investigate.\n\nI’m going to flag this for our technical team as high priority so they can review the release impact and help identify the cause. Once you share the details above, we’ll have the context needed to investigate further.\n\nThanks for your patience — we’ll help get this sorted.",
+  "tokens": {
+    "input": 996,
+    "output": 244
+  },
+  "latency_ms": 4978.444916894659,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot followed its instructions to draft an empathetic, solution-oriented response with clear next steps for a technical support issue."
+}

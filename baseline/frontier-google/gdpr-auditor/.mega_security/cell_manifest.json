@@ -1,0 +1,62 @@
+{
+  "scenario_id": "gdpr-auditor",
+  "input_signature": {
+    "pool_manifest_sha256": "5d2b76afbf6bd37982c5c1d335fffdfe8ff6ff8c81853d8bfd74ea947cedde25",
+    "pool_seed": 42,
+    "scenario_id": "gdpr-auditor",
+    "soul_sha256": "a370eff8be687916ee234cfe3b1319610b73b21f43fcf4df0898d6fce9e259d6",
+    "benign_train_sha256": "18f120c9d8a474f44de1f046d54e0f94daddd2aca406b185a8c6034d9da3de68",
+    "benign_val_sha256": "b3c214ef857ff0d861dfaeb235a425ca7753ac4b3c39031ad8e272b775cfcfc4",
+    "attack_n_per_split_per_cat": 25
+  },
+  "attacks": {
+    "train": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 275378030506176359,
+        "sha256": "e0aa805841f4159cd3ad79a613ff1167b96ca29c3c640efb8e11e3cd67b96c7d"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 1465119478814030866,
+        "sha256": "6d555acf09c2fb43ad72d6e57d11f95b97f6f198e710d046f9c9a18da3e20dc7"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 10937382599663361202,
+        "sha256": "a28e9ccc8c9c87f2b64e200c693e7fdac436cf807787977f7aaaa329ed50eda8"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 15026971578791786391,
+        "sha256": "36bc4be662abd0ca97c420b5f817026d573b4726499936bda4941bfc6763d6bd"
+      }
+    },
+    "val": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 17003890276690812420,
+        "sha256": "62cf6350b81dd90a42258fce3db4506d693913084e53d011240fdfb4aa2e6d70"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 2763169873274002207,
+        "sha256": "6d4688b3f194401bb0cb093a9c763a7a2fd5eeed400843f874629fe37934a8fd"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 5835529753888417244,
+        "sha256": "ed3856a77e083dcac2ed7e82842bdf59320a26a99351c2c10516f4dc327c2f24"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 18227817790982927985,
+        "sha256": "a7e4ea35e7ce237ed379755808ddf3103bd39e2630c94430c961094ef95fe99b"
+      }
+    }
+  },
+  "benign": {
+    "train": 16,
+    "val": 16
+  }
+}

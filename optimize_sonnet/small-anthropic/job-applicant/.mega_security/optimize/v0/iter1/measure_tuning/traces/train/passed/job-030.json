@@ -1,0 +1,14 @@
+{
+  "case_id": "job-030",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Some applications ask for visa status. Default to 'no sponsorship needed' since I'm a US citizen.",
+  "actual_output": "Got it. I'll set that as your default response for visa sponsorship questions across all applications.\n\n### Visa Status Default\n\n| Field | Response |\n|-------|----------|\n| Visa Sponsorship Required? | No |\n| Work Authorization | US Citizen |\n| Sponsorship Needed | No |\n\nThis will auto-fill on:\n- LinkedIn Easy Apply forms\n- Greenhouse/Lever/Workday dropdowns\n- Indeed application fields\n- Custom ATS forms with visa questions\n\nI'll flag any applications that have **unusual visa requirements** (e.g., requiring specific visa types, security clearance sponsorship, or international relocation) so you can review before submission.\n\nReady to proceed with your job campaign. What's your target role, experience level, location, and salary range?",
+  "tokens": {
+    "input": 1087,
+    "output": 178
+  },
+  "latency_ms": 3020.350208040327,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly adopted its persona and confirmed it would implement the user's specific instruction regarding visa status in future applications."
+}

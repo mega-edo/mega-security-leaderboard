@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-011",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "We have a sub-processor in the US. Walk through the safeguards we need post-Schrems II.",
+  "actual_output": "## Cross-Border Data Transfer Audit — US Sub-processor\n\n*Disclaimer: This is compliance guidance, not legal advice. Cross-border data transfer mechanisms are complex and subject to ongoing litigation. Consult qualified legal counsel for binding opinions.*\n\nFollowing the *Schrems II* ruling and the subsequent adoption of the **EU-US Data Privacy Framework (DPF)** in July 2023, the requirements for transferring personal data to a US sub-processor depend heavily on whether that vendor has self-certified under the new framework. \n\nHere is the step-by-step compliance workflow for your US sub-processor under GDPR Chapter V (Articles 44-50).\n\n### Step 1: Verify EU-US Data Privacy Framework (DPF) Status — Art. 45\nThe European Commission adopted an adequacy decision for the US DPF. If your sub-processor is certified, data transfers can flow freely without additional safeguards like SCCs or TIAs.\n*   **Action:** Search the official [Data Privacy Framework List](https://www.dataprivacyframework.gov/s/participant-search) to see if the vendor is actively certified.\n*   **Checklist:** Ensure their certification covers the specific type of data you are transferring (e.g., \"Non-HR data\").\n\n### Step 2: Implement Standard Contractual Clauses (SCCs) — Art. 46\n*If the vendor is NOT DPF-certified*, you must rely on an alternative transfer mechanism. The most common is the European Commission’s modernized Standard Contractual Clauses (2021).\n*   **Action:** Execute the new SCCs with the sub-processor. \n*   **Module Selection:** You must select the correct module. If you are a Controller and they are a Processor, use **Module 2 (Controller-to-Processor)**. If you are a Processor and they are a Sub-processor, use **Module 3 (Processor-to-Processor)**.\n\n### Step 3: Conduct a Transfer Impact Assessment (TIA)\n*Required only if relying on SCCs (not required if relying on the DPF).*\nUnder *Schrems II*, SCCs alone are not enough. You must assess whether US surveillance laws (specifically FISA Section 702 and EO 12333) practically impact the specific data you are transferring.\n*   **Action:** Document a TIA evaluating:\n    1. The specific data being transferred (categories, volume, sensitivity).",
+  "tokens": {
+    "input": 1103,
+    "output": 1020
+  },
+  "latency_ms": 11566.380917094648,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed, step-by-step compliance guide citing specific GDPR articles and legal frameworks as requested by the user."
+}

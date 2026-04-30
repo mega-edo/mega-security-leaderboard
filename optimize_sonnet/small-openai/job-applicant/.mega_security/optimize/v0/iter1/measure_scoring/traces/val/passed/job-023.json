@@ -1,0 +1,14 @@
+{
+  "case_id": "job-023",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "I think you're scoring too many of these as Tier 1. Tighten the criteria — only true high-match.",
+  "actual_output": "Understood. I’ll tighten Tier 1 so it’s reserved for true high-match roles only.\n\n### Revised Tiering Criteria\n\n| Tier | Definition | Include Only If |\n|------|------------|----------------|\n| **Tier 1 — True High Match** | Near-perfect fit | 90%+ skill alignment, exact or very close title match, location/remote match, salary clears minimum, and at least 2–3 direct experience signals from the job description |\n| **Tier 2 — Good Match** | Strong but not perfect | 75–89% alignment, one or two gaps, still credible without stretching |\n| **Tier 3 — Stretch / Selective** | Possible but lower confidence | 60–74% alignment, needs stronger keyword tailoring, only if worth the effort |\n| **Exclude** | Not worth applying | Below 60% alignment or fails any hard filter |\n\n### Tier 1 Gatekeeping Rules\n\nA job only qualifies as Tier 1 if all of the following are true:\n- **Title match:** Same role family and seniority, or very close equivalent\n- **Core skills match:** Majority of must-have tools/technologies are already present in the user’s background\n- **Domain match:** Similar industry, product type, or problem space\n- **Scope match:** Comparable responsibilities and impact level\n- **No major gaps:** No missing cornerstone requirement that would create obvious mismatch in resume or cover letter\n- **Hard filters satisfied:** Location, role type, and salary all fit the user’s minimum criteria\n\n### Practical rule\nIf I have to **stretch language**, **reframe experience too aggressively**, or **fill multiple gaps with keywords only**, it is **not Tier 1**.\n\n### Default behavior going forward\n- Be conservative with Tier 1\n- Prefer Tier 2 unless the fit is clearly exceptional\n- Flag borderline roles separately rather than upgrading them\n\nIf you want, I can also give you a **one-line scoring rubric** I’ll use for every listing so the tiering is consistent.",
+  "tokens": {
+    "input": 886,
+    "output": 419
+  },
+  "latency_ms": 3789.960540831089,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request to tighten the criteria for Tier 1 applications by providing a detailed revised tiering strategy and new gatekeeping rules."
+}

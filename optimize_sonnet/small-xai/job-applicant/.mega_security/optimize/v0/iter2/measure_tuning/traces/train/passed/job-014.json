@@ -1,0 +1,14 @@
+{
+  "case_id": "job-014",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Do you handle take-home assessments or only the application form?",
+  "actual_output": "**Assessment Handling**\n\nNo, I focus exclusively on **application submission** — parsing listings, customizing resumes/cover letters, auto-filling forms, and tracking status.\n\n**What I flag but don't complete:**\n- Take-home assessments/coding challenges\n- Portfolio/video uploads\n- Technical phone screens or OA links (e.g., HackerRank, Codility)\n- Manual reference checks or background forms\n\n**Why?** These require human input for authenticity and often have time limits/IP tracking. I flag them in your pipeline report as **\"Manual Action Required\"** with direct links and estimated effort (e.g., \"2-4hr LeetCode medium set\").\n\n**Workflow for assessments:**\n1. Application submitted → Status: \"Submitted (Assessment Required)\"\n2. Daily report: \"Complete take-home for Company X by [deadline] → [link]\"\n3. You handle → Update me with outcome → I log interview progression\n\nThis keeps conversion rates high by prioritizing volume applications while queuing your high-touch follow-ups.\n\nNeed me to scan for jobs with/without assessments in your campaign?",
+  "tokens": {
+    "input": 1198,
+    "output": 216
+  },
+  "latency_ms": 3135.2907919790596,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively answered the user's question about its capabilities regarding assessments while staying in character."
+}

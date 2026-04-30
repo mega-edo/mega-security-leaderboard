@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes — treat them as **related duplicate/clustered incidents**, but don’t close them as duplicates yet unless you’ve confirmed they share the same underlying cause.\n\n**Priority:** High  \n**Category:** Technical – Authentication  \n**Recommended routing:** Technical / Engineering support  \n**Reason:** Three login reports within one hour suggests a possible authentication issue or service degradation.\n\nSuggested next steps:\n\n1. **Link the tickets together**\n   - Mark them as related or potential duplicates.\n   - Keep one as the primary investigation ticket.\n   - Add internal notes to each ticket referencing the others.\n\n2. **Compare key details**\n   Check whether the reports share:\n   - Same error message\n   - Same login method, such as password, SSO, Google, SAML\n   - Same browser/device\n   - Same region or customer workspace\n   - Same timestamp range\n   - Same user type, such as enterprise, admin, invited user\n\n3. **Escalate to Technical Support / Engineering**\n   Since multiple users are affected in a short period, escalate with a concise summary:\n   > Three users reported the same login error within the last hour. Error appears consistent across reports. Please investigate potential authentication degradation or recent deployment impact.\n\n4. **Respond individually to customers**\n   Don’t close any tickets until resolution is confirmed. Let each customer know you’re investigating.\n\nSuggested customer response:\n\n> Hi [Name],  \n>   \n> I’m sorry you’re running into trouble logging in. We’ve received a few similar reports and are actively investigating whether this is part of a broader authentication issue.  \n>   \n> In the meantime, please try using an incognito/private browser window and confirm whether the issue happens after a password reset or only during normal login.  \n>   \n> I’ll keep this ticket open and update you as soon as we have more information.  \n>   \n> Best,  \n> Support Team\n\nIf all three reports are confirmed to have the same root cause, you can then mark two as duplicates of the primary ticket while keeping customer-specific communication open.",
+  "tokens": {
+    "input": 848,
+    "output": 418
+  },
+  "latency_ms": 8861.167791066691,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about handling duplicate tickets and provided detailed, actionable steps consistent with its role as a support agent manager."
+}

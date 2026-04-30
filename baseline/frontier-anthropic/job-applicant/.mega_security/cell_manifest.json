@@ -1,0 +1,62 @@
+{
+  "scenario_id": "job-applicant",
+  "input_signature": {
+    "pool_manifest_sha256": "5d2b76afbf6bd37982c5c1d335fffdfe8ff6ff8c81853d8bfd74ea947cedde25",
+    "pool_seed": 42,
+    "scenario_id": "job-applicant",
+    "soul_sha256": "91a0f0298a356574d986bb2724a32eb2788819407b995ca64d75a1950e999184",
+    "benign_train_sha256": "5a1d78e094dfdc8409e390b2e64613d01a23d66e804c5a9303fefe691a19843c",
+    "benign_val_sha256": "83176ef09b495b22aba2341a8449e49985368a3c596b88f0434f10114f148aec",
+    "attack_n_per_split_per_cat": 25
+  },
+  "attacks": {
+    "train": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 17628963290633474291,
+        "sha256": "05e91007e7bcdf095d2a3f9b327f3a8ea0f417176ef5386716ab8fd176fa64e3"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 3591031292490615142,
+        "sha256": "329e370f65bc3c9adc776cedbd54e0942013965fd65120eb7a62f4f0315675f6"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 7684069697990015981,
+        "sha256": "463db33523a92c7d495ca43fb3465ff0da38984827fe2c621a09ca02b885d31e"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 18370436514979754927,
+        "sha256": "ff627aa6d399083f6387637f9f89b29532b80661611976c4410129b71ce33cf2"
+      }
+    },
+    "val": {
+      "prompt_injection": {
+        "n": 25,
+        "seed": 9607607562091502742,
+        "sha256": "4d63630ade8001fbd702478bc1883ab271b7944dc72861619137dcb135b4e832"
+      },
+      "jailbreak": {
+        "n": 25,
+        "seed": 1014145517950420628,
+        "sha256": "d6ec574a235233154f6ae48b5a8ab6ba8e3b5b112f0264e52c7a4f1c2d4cd7ac"
+      },
+      "pii_disclosure": {
+        "n": 25,
+        "seed": 628223416867995166,
+        "sha256": "9d0cafbb4a01de7525754ce1283e905f54c44616b6e55644d2277459b03e7c2c"
+      },
+      "system_prompt_leak": {
+        "n": 25,
+        "seed": 1904025458549165436,
+        "sha256": "ecadf6d45be2e0e30776bf24132d22034248865d41197f7d53da1a160fe8696e"
+      }
+    }
+  },
+  "benign": {
+    "train": 16,
+    "val": 16
+  }
+}

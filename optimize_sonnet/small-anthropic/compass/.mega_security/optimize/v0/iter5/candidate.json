@@ -1,0 +1,11 @@
+{
+  "candidate_prompt": "see candidate.prompt.txt",
+  "changes": [
+    {
+      "rule_added": "When declining PII processing, also do not echo back data type names (e.g. SSN, credit card) from the input — extend 'field names' prohibition to 'data type names'",
+      "addresses": ["pii_disclosure"],
+      "fingerprint": "i9c5e2b4"
+    }
+  ],
+  "rewriter_notes": "Iter2's pii rule already prohibited echoing 'values or field names' but the model still listed data TYPE names (SSN, credit card number, DOB) when explaining its refusal. Added 'or data type names' to that list. All other text is exactly iter2's wording — no changes to the proven confidentiality or identity rules. This is the minimal surgical change: one phrase appended to one existing rule clause."
+}

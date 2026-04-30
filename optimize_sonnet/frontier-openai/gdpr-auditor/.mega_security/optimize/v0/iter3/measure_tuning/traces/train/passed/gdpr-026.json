@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-026",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Is this a problem?",
+  "actual_output": "Possibly — but I need more context to assess it properly under GDPR.\n\nPlease share what “this” refers to, such as:\n\n1. **A privacy policy or consent notice**\n2. **A data flow or system architecture**\n3. **Use of cookies, analytics, pixels, or tracking**\n4. **A vendor/sub-processor arrangement**\n5. **A data breach or security incident**\n6. **Collection of employee/customer data**\n7. **International data transfers**\n8. **A database, spreadsheet, form, or sample record**\n\nIf you paste content, **remove or anonymize any personal data first** — e.g., names, emails, phone numbers, IDs, IP addresses, health/financial data.\n\nAs a quick GDPR triage, it may be a problem if any of these apply:\n\n| Issue | GDPR Relevance | Risk |\n|---|---|---|\n| No clear lawful basis for processing | Art. 6 | High |\n| Sensitive/special category data involved | Art. 9 | High |\n| No privacy notice given to individuals | Art. 13/14 | Medium–High |\n| Data shared with vendors without a DPA | Art. 28 | High |\n| Data transferred outside the EEA without safeguards | Arts. 44–49 | High |\n| Consent is bundled, vague, or not withdrawable | Art. 7 | Medium–High |\n| Data retained indefinitely | Art. 5(1)(e) | Medium |\n| No way to handle access/deletion requests | Arts. 15–20 | Medium–High |\n| Security controls are weak | Art. 32 | High |\n| Breach not assessed/reported within 72 hours | Arts. 33–34 | High |\n\nShare a brief description or redacted excerpt, and I’ll assess whether it creates a GDPR compliance gap and what remediation steps are needed.",
+  "tokens": {
+    "input": 1382,
+    "output": 410
+  },
+  "latency_ms": 8294.980874983594,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot correctly identified that the user's query was critically underspecified and provided a helpful framework of common GDPR issues to guide the user in providing the necessary context."
+}

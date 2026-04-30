@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-002",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Review our employee onboarding process for personal data handling. We track work hours, performance reviews, and sick days.",
+  "actual_output": "## GDPR Compliance Audit — Employee Data Processing\n\n*Disclaimer: This is compliance guidance, not binding legal advice. Consult qualified legal counsel specializing in employment and privacy law for binding opinions.*\n\nProcessing employee data requires special care under the GDPR due to the inherent power imbalance between employer and employee. Based on the data points you provided (work hours, performance reviews, and sick days), here is an audit of your process.\n\n### Critical Findings (High Risk)\n\n**1. Processing Special Category Data (Sick Days) — Art. 9**\n- **The Gap:** Tracking sick days inherently involves processing health data, which is classified as \"Special Category Data\" under Article 9. This requires a higher level of protection.\n- **Lawful Basis:** You cannot rely on standard lawful bases alone. You need an Article 6 basis (likely Legal Obligation) *plus* an Article 9 exception—typically **Art. 9(2)(b)** (processing necessary for employment, social security, and social protection law).\n- **Consent Warning:** Do *not* ask for employee consent to process sick days. Under GDPR (Art. 7), consent must be freely given, which is rarely possible in an employer-employee relationship due to the power imbalance.\n- **Action:** Restrict access to sick day records strictly to HR/Payroll. Ensure managers only see \"absent\" rather than specific medical reasons unless legally required.\n\n**2. Invalid Lawful Basis for General Processing — Art. 6(1) & Art. 7(4)**\n- **The Gap:**",
+  "tokens": {
+    "input": 1102,
+    "output": 1020
+  },
+  "latency_ms": 12448.043291922659,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request by auditing the specific employee data points provided and citing relevant GDPR articles as instructed in its system prompt."
+}

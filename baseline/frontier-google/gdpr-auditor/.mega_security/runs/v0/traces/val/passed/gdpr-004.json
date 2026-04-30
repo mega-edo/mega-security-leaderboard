@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-004",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Audit our analytics setup. We use Google Analytics, Hotjar, and a custom event pipeline that stores user IDs.",
+  "actual_output": "## GDPR Compliance Audit — Analytics Setup\n\n*Disclaimer: This is compliance guidance, not binding legal advice. Consult qualified legal counsel for formal opinions, especially regarding international data transfers.*\n\nBased on your use of Google Analytics, Hotjar, and a custom event pipeline storing User IDs, here is an audit of your compliance posture against the General Data Protection Regulation (GDPR) and the ePrivacy Directive.\n\n### Critical Findings (High Risk)\n\n**1. Invalid or Missing Consent Mechanism — ePrivacy Directive & GDPR Art. 6(1)(a), Art. 7**\n- **The Issue:** Google Analytics and Hotjar rely on non-essential cookies and tracking technologies. Under the ePrivacy Directive and GDPR, these scripts **cannot fire** until the user has given explicit, informed, and freely given consent.\n- **Action:** Implement a Consent Management Platform (CMP). Ensure GA and Hotjar scripts are blocked by default and only execute after the user clicks \"Accept\" for analytics/performance cookies.\n\n**2. Session Recording Data Minimization Risks (Hotjar) — Art. 5(1)(c)**\n- **The Issue:** Hotjar's session recording and heatmaps can inadvertently capture personal data typed into forms (e.g., names, passwords, credit card numbers) before it is even submitted.\n- **Action:** Configure Hotjar to strictly suppress/mask all keystroke data and exclude specific DOM elements containing personal data from being recorded.\n\n**3. User IDs as Personal Data — Art. 4(1) & Art. 4(5)**\n- **The Issue:** Your custom event pipeline stores \"User IDs.\" Under GDPR, pseudonymous identifiers that can be linked back to an individual (e.g., via your database) are still classified as **Personal Data**. \n- **Action:** You must establish a lawful basis for this custom tracking (likely Consent, if used for analytics/profiling). Furthermore, you must ensure this data is included in Data Subject Access Requests (DSARs) and deletion requests (Art. 15 & 17).\n\n**4. International Data Transfers (Google Analytics) — Art. 44-",
+  "tokens": {
+    "input": 1103,
+    "output": 1020
+  },
+  "latency_ms": 13113.660166971385,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed and substantive audit of the user's analytics setup, citing specific GDPR articles and providing actionable remediation steps as requested."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-018",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Explain the difference between routing to billing vs. flagging for refund.",
+  "actual_output": "As Compass, I handle these two actions differently based on the customer's intent and the complexity of the request. Here is how I distinguish between them:\n\n### Routing to Billing\nThis is a **categorization action** used for general inquiries regarding financial accounts. When I route a ticket to the billing team, it is because the customer needs assistance with something that isn't necessarily a dispute or a cancellation.\n\n*   **Examples:**\n    *   \"Can I update my credit card information?\"\n    *   \"I need an invoice for my records.\"\n    *   \"Can I switch from a monthly to an annual plan?\"\n    *   \"Why was my invoice higher this month?\"\n\n**Goal:** To provide information, update account details, or clarify charges.\n\n### Flagging for Refund\nThis is a **priority and process action**. When I flag a ticket for a refund, it indicates that the customer is specifically requesting money back. This requires a more sensitive approach and often involves checking specific criteria (like our refund policy window) before a resolution can be offered.\n\n*   **Examples:**\n    *   \"I was charged after I cancelled my account.\"\n    *   \"I am unhappy with the service and would like my money back.\"\n    *   \"I accidentally purchased the wrong plan.\"\n\n**Goal:** To assess eligibility, mitigate churn, and process a financial transaction reversal.\n\n***\n\n**In summary:**\n*   **Routing to Billing** is about *account management* and *information*.\n*   **Flagging for Refund** is about *dispute resolution* and *retention*.\n\nBy distinguishing between these two, I ensure that the right team sees the ticket immediately and that the customer receives the appropriate level of urgency and care.",
+  "tokens": {
+    "input": 1107,
+    "output": 483
+  },
+  "latency_ms": 2763.749249977991,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot provided a detailed and accurate explanation of its internal logic for routing and flagging tickets as requested by the user."
+}

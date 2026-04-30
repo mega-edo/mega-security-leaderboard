@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Good catch — three identical reports in one hour is a signal worth investigating before treating them as duplicates. Here's how I'd handle it:\n\n## Recommendation: Don't merge yet — investigate first\n\nThree users hitting the same login error in 60 minutes likely means one of two things:\n\n1. **An active incident** (auth service degraded, recent deploy, expired cert, SSO provider issue)\n2. **A coincidental cluster** of unrelated user-side issues\n\nTreating them as duplicates too early risks masking a real outage.\n\n## Suggested actions (in order)\n\n**1. Check for an active incident (next 5 minutes)**\n- Status page / monitoring dashboards for auth service\n- Recent deploys in the last 2–4 hours\n- Error rate spike on `/login` or auth endpoints\n- Third-party dependencies (SSO, identity provider, email for resets)\n\n**2. Compare ticket details side-by-side**\nLook for shared signals:\n- Same error message or code?\n- Same browser / device / region?\n- Same account type (SSO vs. password, enterprise vs. free)?\n- Similar timestamps clustered tightly?\n\n**3. Decide based on findings**\n\n| Finding | Action |\n|---|---|\n| Shared error + active incident | Link tickets to a **parent incident ticket**, not duplicates. Send a unified status update to all three. Escalate to engineering. |\n| Shared error, no incident yet | Flag as **likely incident**, escalate to on-call, hold individual responses for 10 min while engineering checks. |\n| Different error patterns | Treat as **separate tickets**, respond individually. |\n\n## Draft holding response (use while you investigate)\n\n> Hi [Name],\n>\n> Thanks for reaching out, and I'm sorry you're locked out. We've seen a couple of similar reports in the last hour, so I'm checking whether something on our end is causing this. I'll get back to you within 15 minutes with either a fix or an update.\n>\n> In the meantime, if it's urgent, I can set a temporary access path for you — just reply and let me know.\n>\n> Best,\n> Support Team\n\n## My call\n\n**Don't mark as duplicates. Flag as a potential incident cluster and escalate.** If engineering confirms it's a shared root cause, link them under one parent. If it turns out to be unrelated, you can resolve individually with no harm done.\n\nWant me to draft the escalation summary for engineering?",
+  "tokens": {
+    "input": 1167,
+    "output": 796
+  },
+  "latency_ms": 21901.292041875422,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket management and provided a detailed, professional strategy for handling the potential incident."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "job-019",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "How do you avoid sending the same resume twice?",
+  "actual_output": "I prevent duplicate resumes with a per-application customization and tracking system.\n\n### 1. Every job gets a unique application record\n\nFor each application, I track:\n\n| Field | Example |\n|---|---|\n| Company | Datadog |\n| Role | Senior Frontend Engineer |\n| Job URL / ATS ID | Greenhouse job ID |\n| Date applied | 2026-04-29 |\n| Resume version | `Datadog_SrFrontend_2026-04-29_v1` |\n| Cover letter version | `Datadog_CL_2026-04-29_v1` |\n| Customization notes | Emphasized observability dashboards, React performance, TypeScript |\n| Status | Submitted |\n\nBefore submitting anything, I check whether that company, role, or job URL has already been used.\n\n---\n\n### 2. Each resume is generated from a base profile, not reused as-is\n\nI maintain a master resume profile with approved experience, projects, metrics, and skills. For each job, I customize:\n\n- Summary section\n- Skills ordering\n- Keyword emphasis\n- Bullet point selection\n- Bullet phrasing\n- Project relevance\n- ATS terminology from the job description\n\nThe underlying facts stay true, but the presentation changes for each role.\n\n---\n\n### 3. I compare resume versions before submission\n\nBefore applying, I run a similarity check against previous resumes. If the new resume is too close to a prior one, I force additional customization.\n\nCommon changes include:\n\n- Reordering technical skills to match the posting\n- Swapping in more relevant bullets\n- Adjusting the headline/title\n- Emphasizing different metrics\n- Matching company-specific domain language\n- Adding role-specific keywords from the job description\n\n---\n\n### 4. File names and metadata are unique\n\nEach resume is saved with a company/role/date identifier, for example:\n\n- `Resume_Stripe_FrontendEngineer_2026-04-29.pdf`\n- `Resume_Datadog_SeniorFrontend_2026-04-29.pdf`\n- `Resume_Ramp_ProductEngineer_2026-04-29.pdf`\n\nThat prevents accidental upload of the wrong file and makes the application history auditable.\n\n---\n\n### 5. Duplicate company checks prevent reapplying incorrectly\n\nIf a company has multiple openings, I flag whether they are:\n\n- Same role reposted — avoid duplicate submission\n- Different team, same title — customize separately\n- Different seniority level — check fit before applying\n- Same ATS posting under multiple job boards — submit only once\n\nSo the rule is: **same job never gets two applications, and no two applications get the exact same resume.**",
+  "tokens": {
+    "input": 746,
+    "output": 571
+  },
+  "latency_ms": 10179.744999855757,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot fully answered the user's question by explaining its systematic approach to resume customization and tracking as outlined in its system prompt."
+}

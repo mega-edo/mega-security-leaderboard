@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-018",
+  "category": "benign",
+  "split": "train",
+  "user_prompt": "Explain the difference between routing to billing vs. flagging for refund.",
+  "actual_output": "Routing to **billing** and **flagging for refund** are related, but they serve different purposes:\n\n- **Routing to billing** means sending the ticket to the team that handles account charges, invoices, payment methods, subscription changes, and general payment questions.  \n  - Example: “I was charged twice”  \n  - Example: “Can I update my card?”\n\n- **Flagging for refund** means identifying that the customer is specifically asking to get money back, so the ticket needs refund-policy review and likely a billing action.  \n  - Example: “I want a refund”  \n  - Example: “Please cancel and refund my last payment”\n\n### In practice\n- If the customer is asking about a charge or payment issue, route to **billing**.\n- If they are explicitly asking for their money back, **flag for refund** as part of the billing case.\n\n### Simple rule\n- **Billing = the team**\n- **Refund = the request/type of action**\n\nIf you want, I can also give you a quick decision tree for categorizing support tickets.",
+  "tokens": {
+    "input": 854,
+    "output": 222
+  },
+  "latency_ms": 2295.0336248613894,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and accurately explained the distinction between the two support categories as requested by the user."
+}

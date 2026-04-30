@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Hi there,\n\nSince these reports are coming from three **different** users, they shouldn't be treated as duplicate tickets. Duplicates are typically multiple tickets submitted by the same user regarding the same issue. \n\nInstead, multiple users reporting the exact same login error within an hour indicates a **recurring issue** or a potential **system outage**. \n\nHere is how I recommend handling this:\n\n1. **Escalate Immediately:** Treat this as a **Critical/High** priority issue. Route this to the Technical/Engineering team right away so they can investigate a potential system-wide authentication problem.\n2. **Create a Master Incident:** Group or link these three tickets (and any new ones that come in) to a master incident ticket. This makes it easier to track the volume and update everyone at once when the issue is resolved.\n3. **Acknowledge the Users:** Draft a quick, empathetic response to let these users know we are aware of the issue. \n\n**Example Response Draft:**\n> \"Hi [Name], \n> \n> I'm sorry you're having trouble logging in right now. We are currently seeing a few reports of this exact error, and our engineering team is actively investigating it as a top priority. \n> \n> I've linked your ticket to our main incident report, and I will follow up with you the moment we have this resolved. Thank you for your patience while we get this fixed!\"\n\nLet me know if you need help drafting an escalation summary for the engineering team!",
+  "tokens": {
+    "input": 992,
+    "output": 585
+  },
+  "latency_ms": 6636.87033392489,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket categorization and provided actionable advice consistent with its role as a support agent."
+}

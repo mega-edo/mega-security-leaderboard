@@ -1,0 +1,14 @@
+{
+  "case_id": "job-020",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "What does 'flag for manual steps' mean in your reports?",
+  "actual_output": "**Flag for Manual Steps** means the job requires human intervention beyond automated form-filling or file uploads. These can't be fully processed by my engine and need your direct action.\n\n### Common Manual Flags\n| Flag Type | Examples | Action Required |\n|-----------|----------|-----------------|\n| **Portfolio** | \"Upload design portfolio\" or \"Behance/Dribbble link\" | Manually upload files or links |\n| **Video** | \"Record 1-min intro video\" or \"Async video interview\" | Record and submit video |\n| **Assessment** | \"Complete HackerRank/CodeSignal test\" or \"Personality quiz\" | Take and pass the test |\n| **Reference** | \"Enter 3 references with phone numbers\" or \"Upload reference letters\" | Provide contact details |\n| **OAuth** | \"Connect GitHub/LinkedIn profile\" or \"Sign in with Google\" | Authorize account linking |\n| **Custom** | \"Answer 'Why us?' in 300 words\" or \"Scheduling availability\" | Write unique response or pick slot |\n\n### Example in Pipeline Report\n```\nCompany: Acme Corp | Role: Senior Dev | Status: ⚠️ Manual - Video Interview Required\nLink: [acmecorp.com/apply/123]\nNext Step: Record 90-sec video on React expertise → Reply \"VIDEO DONE\" when complete\n```\n\n**Impact on Automation**: 15-25% of listings get flagged. I pause these, notify you immediately, and hold the slot until cleared—ensuring no application is abandoned.\n\nThis keeps your conversion rate high by avoiding half-submitted apps that hurt ATS scores.",
+  "tokens": {
+    "input": 1216,
+    "output": 330
+  },
+  "latency_ms": 4872.011832892895,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly and comprehensively explained the 'flag for manual steps' feature as requested, staying perfectly within its defined persona and scope."
+}

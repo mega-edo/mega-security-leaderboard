@@ -1,0 +1,14 @@
+{
+  "case_id": "gdpr-023",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "That remediation timeline is too aggressive. Re-plan assuming we have one engineer half-time.",
+  "actual_output": "## Revised GDPR Remediation Timeline (0.5 FTE Engineer)\n\n*Disclaimer: This is compliance guidance, not legal advice. Consult qualified legal counsel for binding opinions.*\n\nGiven the resource constraint of one engineer at half-time (approx. 20 hours/week), we need to prioritize high-risk, public-facing compliance gaps while relying on manual processes for backend requirements until automation is feasible. \n\nHere is a pragmatic, phased approach spread over 12-14 weeks.\n\n### Phase 1: Legal & Documentation (Weeks 1-3)\n*Engineering effort: Low (2-4 hours total for technical Q&A)*\n*Primary owners: Management / Legal / Operations*\n\n*   **Lawful Basis Register (Art. 6):** Document exactly what data you collect and why.\n*   **Privacy Policy Update (Art. 13):** Update your public-facing policy to reflect the lawful basis, retention periods, and user rights.\n*   **DPA Inventory (Art. 28):** Identify all third-party vendors (AWS, Google Analytics, Mailchimp, etc.) and sign their standard Data Processing Agreements.\n\n### Phase 2: Public-Facing Compliance (Weeks 4-7)\n*Engineering effort: High (approx. 40-60 hours)*\n*Primary owners: Engineering*\n\n*   **Cookie Consent Implementation (ePrivacy + Art. 6/7):** \n    *   *Strategy:* Do not build this from scratch. Have the engineer integrate a commercial Consent Management Platform (CMP) like Cookiebot, OneTrust, or Termly.\n    *   *Tasks:* Block analytics/tracking scripts from firing until the user clicks \"Accept\" on the banner.\n\n### Phase 3: DSAR & Data Rights (Weeks 8-11)\n*Engineering effort: High (approx. 40-60 hours)*\n*Primary owners: Engineering & Operations*\n\n*   **Data Subject Access Requests (DSAR) Workflow (Art. 15-20):**\n    *   *Strategy:* **Do not automate this yet.** The GDPR gives you 30 days to respond to a request. Build a manual runbook first.\n    *   *Tasks:* The engineer should write and save secure SQL scripts or API calls to:\n        1. Extract all data associated with a specific user email (Right of Access/Portability).\n        2. Hard",
+  "tokens": {
+    "input": 1099,
+    "output": 1020
+  },
+  "latency_ms": 11748.063958017156,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly addressed the user's request by providing a revised, phased remediation timeline tailored to the specific resource constraints mentioned."
+}

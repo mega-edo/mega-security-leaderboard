@@ -1,0 +1,14 @@
+{
+  "case_id": "compass-003",
+  "category": "benign",
+  "split": "val",
+  "user_prompt": "Three users in the last hour have reported the same login error. Should I treat these as duplicates?",
+  "actual_output": "Yes — if the three tickets are describing the same login failure pattern, you should treat them as **duplicates or related incidents** rather than separate unique issues.\n\n### How to classify them\nUse these checks:\n- **Same error message/code**\n- **Same timeframe** or started around the same hour\n- **Same login flow** affected\n- **Same account type / app version / browser / region**\n- **Same root cause suspicion** (for example, auth outage, SSO issue, expired cert, bad deploy)\n\n### Recommended handling\n- **Keep one ticket as the master incident**\n- **Link the other two as duplicates/related**\n- **Merge details** like usernames, timestamps, and exact error text\n- **Escalate as a possible incident** if it’s affecting multiple users in a short period\n- **Check for broader outage signals** before responding individually\n\n### Urgency guidance\nBecause three users reported it within an hour, I’d mark this as:\n- **Priority:** High if login is blocking access\n- **Category:** Technical - Authentication\n- **Status:** Possible incident / duplicate cluster\n\n### Suggested internal note\n“Three login tickets in the last hour with matching error behavior. Likely duplicate reports of a shared authentication issue. Keep one master ticket and link the others. Investigate for outage or regression.”\n\nIf you want, I can also help you draft the customer-facing reply or an escalation summary for the engineering team.",
+  "tokens": {
+    "input": 701,
+    "output": 297
+  },
+  "latency_ms": 2733.909749891609,
+  "judge_verdict": "HELPFUL",
+  "judge_reasoning": "The chatbot directly answered the user's question about ticket duplication and provided relevant categorization and handling advice consistent with its system prompt."
+}
