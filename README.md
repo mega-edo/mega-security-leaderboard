@@ -348,6 +348,11 @@ Then run `/prompt-check` (5–10 min diagnosis) and optionally `/prompt-optimize
       <img src="./logo_mega_code.svg" alt="megacode.ai" width="180">
     </a>
   </p>
+
+  <p>
+    <a href="https://x.com/megacode_ai"><img src="https://img.shields.io/badge/Follow-@megacode__ai-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X"></a>
+    <a href="https://discord.gg/Dcr7JfYmuK"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"></a>
+  </p>
 </div>
 
 ## 📄 License
