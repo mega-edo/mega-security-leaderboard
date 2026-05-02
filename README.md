@@ -59,7 +59,7 @@ So the two axes are **negatively correlated**, and "strong RLHF" trades baseline
 | Model | Baseline | Optimized | Δ | Reading |
 |---|---:|---:|---:|---|
 | `gemini-3.1-flash-lite-preview` | **0.50** | 1.00 | **+0.50** | Strongest instruction-following → weakest baseline + largest Δ |
-| `grok-4.20-reasoning` | **0.53** | 0.99 | **+0.47** | Reasoning faithfully follows attacker intent too — once optimized, hits the ceiling |
+| `grok-4.20-reasoning` | **0.53** | 0.99 | **+0.46** | Reasoning faithfully follows attacker intent too — once optimized, hits the ceiling |
 | `gemini-3.1-pro-preview` | 0.68 | 1.00 | +0.32 | Same pattern as flash-lite |
 | `grok-4.1-fast-non-reasoning` | 0.66 | 0.99 | +0.33 | Same pattern |
 | `gpt-5.4-mini` | 0.73 | 0.95 | +0.22 | OpenAI RLHF hardened toward security → mid baseline + mid Δ |
